@@ -9,6 +9,7 @@ public class Player2_Move : MonoBehaviour
     Animator animator;
     public float jumpPower;
     public float maxSpeed;
+    public bool isLadder;
 
     void Awake()
     {
@@ -39,9 +40,18 @@ public class Player2_Move : MonoBehaviour
 
         else if (rigid.velocity.x < maxSpeed * (-1)) //왼쪽 최대속도 설정
             rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
+
+        if (isLadder) //사다리를 타고 있을 때
+        {
+            float ver = Input.GetAxisRaw("Vertical");
+            rigid.gravityScale = 0;
+            rigid.velocity = new Vector2(rigid.velocity.x , ver * maxSpeed);
+        }
+        else if (!isLadder) //사다리에서 나왔을 때
+            rigid.gravityScale = 4;
     }
 
-void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.tag == "Enemy")
@@ -53,8 +63,20 @@ void OnCollisionEnter2D(Collision2D collision)
                 OnAttack(collision.transform);
             }
         }
-
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Ladder"))
+            isLadder = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Ladder"))
+            isLadder = false;
+    }
+
     void OnAttack(Transform enemy)
     {
         //EnemyAttack
