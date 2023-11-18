@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public Transform startPos;  // ½ÃÀÛ À§Ä¡
-    public Transform endPos;    // ³¡ À§Ä¡
-    public Transform desPos;    // µµÂøÁöÀÇ Transform
-    public float speed;         // ¹ßÆÇ ¼Óµµ Á¶Àı
+    public Transform startPos;  // ì‹œì‘ ìœ„ì¹˜
+    public Transform endPos;    // ë ìœ„ì¹˜
+    public Transform desPos;    // ë„ì°©ì§€ì˜ Transform
+    public float speed;         // ë°œíŒ ì†ë„ ì¡°ì ˆ
 
     bool isMoving = false;
 
     void Start()
     {
-        transform.position = startPos.position;  // ¹ßÆÇÀº startPos
-        desPos = endPos;  // ¸ñÀûÁö´Â endPos
+        transform.position = startPos.position;  // ë°œíŒì€ startPos
+        desPos = endPos;  // ëª©ì ì§€ëŠ” endPos
 
         //buttonAnim = GetComponentInChildren<Animator>();
     }
@@ -23,10 +23,10 @@ public class MovingPlatform : MonoBehaviour
     {
         if (isMoving)
         {
-            // ¹ßÆÇ ÀÏÁ¤ Æ÷ÀÎÆ®·Î ÀÌµ¿, MoveTowards(ÇöÀçÀ§Ä¡, ¸ñÇ¥À§Ä¡, ¼Óµµ)
+            // ë°œíŒ ì¼ì • í¬ì¸íŠ¸ë¡œ ì´ë™, MoveTowards(í˜„ì¬ìœ„ì¹˜, ëª©í‘œìœ„ì¹˜, ì†ë„)
             transform.position = Vector2.MoveTowards(transform.position, desPos.position, Time.deltaTime * speed);
 
-            // ¹ßÆÇÀÌ ¸ñÀûÁö¿¡ µµÂøÇÏ¸é Ãâ¹ßÁö¸¦ µµÂøÁö·Î º¯°æ
+            // ë°œíŒì´ ëª©ì ì§€ì— ë„ì°©í•˜ë©´ ì¶œë°œì§€ë¥¼ ë„ì°©ì§€ë¡œ ë³€ê²½
             if (Vector2.Distance(transform.position, desPos.position) <= 0.05f)
             {
                 if (desPos == endPos)
@@ -38,26 +38,26 @@ public class MovingPlatform : MonoBehaviour
 
     }
 
-    // ¹ßÆÇ ¿òÁ÷ÀÓ
+    // ë°œíŒ ì›€ì§ì„
     public void StartMoving()
     {
         isMoving = true;
     }
 
-    // ¹ßÆÇ ¿òÁ÷ÀÓ ¸ØÃã
+    // ë°œíŒ ì›€ì§ì„ ë©ˆì¶¤
     public void StopMoving()
     {
         isMoving = false;
     }
 
-    // ¹ßÆÇÀÇ ¿òÁ÷ÀÓ¿¡ µû¶ó ÇÃ·¹ÀÌ¾îµµ ¿òÁ÷ÀÌ°Ô ÇÏ±â
+    // ë°œíŒì˜ ì›€ì§ì„ì— ë”°ë¼ í”Œë ˆì´ì–´ë„ ì›€ì§ì´ê²Œ í•˜ê¸°
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        // Á¢ÃËÇÑ ÅÂ±×°¡ PlayerÀÏ¶§
-        if (collision.transform.CompareTag("Player"))
+        // ì ‘ì´‰í•œ íƒœê·¸ê°€ Playerì¼ë•Œ
+        if (collision.transform.CompareTag("Player1") || collision.transform.CompareTag("Player2"))
         {
-            // Player¸¦ ¹ßÆÇÀÇ ÀÚ½Ä ÅÂ±×·Î ¸¸µé±â
+            // Playerë¥¼ ë°œíŒì˜ ìì‹ íƒœê·¸ë¡œ ë§Œë“¤ê¸°
             collision.transform.SetParent(transform);
         }
 
@@ -65,10 +65,12 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // Á¢ÃËÇÑ ÅÂ±×°¡ PlayerÀÏ¶§
-        if (collision.transform.CompareTag("Player"))
+        // ì ‘ì´‰í•œ íƒœê·¸ê°€ Playerì¼ë•Œ
+
+        if (collision.transform.CompareTag("Player1") || collision.transform.CompareTag("Player2"))
+
         {
-            // Player¸¦ ¹ßÆÇÀÇ ÀÚ½Ä ÅÂ±×¿¡¼­ Å»Ãâ
+            // Playerë¥¼ ë°œíŒì˜ ìì‹ íƒœê·¸ì—ì„œ íƒˆì¶œ
             collision.transform.SetParent(null);
         }
     }
