@@ -7,13 +7,15 @@ public class EnemyMove : MonoBehaviour
     public int nextMove;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
-    BoxCollider2D boxCollider;
+    PolygonCollider2D polygonCollider;
+    Animator animator;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        polygonCollider = GetComponent<PolygonCollider2D>();
+        animator = GetComponent<Animator>();
         Invoke("Think", 3);
     }
 
@@ -25,18 +27,28 @@ public class EnemyMove : MonoBehaviour
         //낭떠러지 감지
         Vector2 front = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y - 1);
         Debug.DrawRay(front, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(front, Vector3.down, 0.5f, LayerMask.GetMask("Platform"));
+        RaycastHit2D rayHit = Physics2D.Raycast(front, Vector3.down, 0.2f, LayerMask.GetMask("Platform"));
 
         if (rayHit.collider == null)
         {
-            Debug.Log("조심해~");
-            Turn();
+            if (spriteRenderer.flipY != true) //몬스터가 죽고난 다음에는 실행되지 않기 위한 코드
+            {
+                Turn();
+            }
         }
     }
 
     public void Think()
     {
         nextMove = Random.Range(-1, 2); //이동방향 설정, 2는 포함되지 않음
+
+        animator.SetInteger("WalkSpeed", nextMove); //걷는속도에 따라 걷기 애니메이션 전환 
+
+        if (nextMove != 0) //바라보는 방향 전환
+        {
+            spriteRenderer.flipX = nextMove == 1;
+        }
+
         Invoke("Think", 3);
     }
 
@@ -44,6 +56,7 @@ public class EnemyMove : MonoBehaviour
     void Turn()
     {
         nextMove *= -1;
+        spriteRenderer.flipX = nextMove == 1;
         CancelInvoke();
         Invoke("Think", 2);
     }
@@ -56,8 +69,8 @@ public class EnemyMove : MonoBehaviour
         spriteRenderer.flipY = true;
         //Color Alpha
         spriteRenderer.color = new Color(1, 1, 1, 0.5f);
-        //BoxCollider Enabled
-        boxCollider.enabled = false;
+        //polygonCollider Enabled
+        polygonCollider.enabled = false;
         //DeActive Delay
         Invoke("DeActive", 3);
     }
