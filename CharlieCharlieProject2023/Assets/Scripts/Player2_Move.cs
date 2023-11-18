@@ -35,8 +35,6 @@ public class Player2_Move : MonoBehaviour
             animator.SetBool("P2_isJumping", true);
         }
 
- 
-
         //미끄러짐 방지
         if (Input.GetButtonUp("Horizontal"))
         {
@@ -182,7 +180,7 @@ public class Player2_Move : MonoBehaviour
     void OffDamaged() //무적상태 해제
     {
         gameObject.layer = 7;
-        spriteRenderer.color = new Color(1, 1, 0.7f, 1);
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
     void OnAttack(Transform enemy)
