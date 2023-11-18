@@ -7,22 +7,31 @@ TagManager:
   - Enemy
   - Teleport
   - Ladder
+  - Platform
+  - Player1
+  - Player2
+  - P1_Obstacle
+  - P2_Obstacle
+  - Obstacle
+  - P1_Finish
+  - P2_Finish
+  - Item
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Platform
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player1
+  - Player2
+  - PlayerDamaged
+  - Enemy
+  - Item
+  - P1_Obstacle
+  - P2_Obstacle
+  - Obstacle
+  - Finish
   - 
   - 
   - 
