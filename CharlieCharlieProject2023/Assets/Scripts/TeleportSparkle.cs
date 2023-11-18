@@ -16,7 +16,7 @@ public class TeleportSparkle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            animator.SetBool("teleport_sparkle", true);
+            animator.SetTrigger("teleport_sparkle");
         }
     }
 }
