@@ -37,18 +37,18 @@ public class PlayerTeleport : MonoBehaviour
 
     void MoveTo(Transform Pos, int i)
     {
-        Vector2 FirstBox = new Vector2(TeleportPos[0].transform.position.x - 1, TeleportPos[0].transform.position.y - 1);
+        Vector2 FirstBox = new Vector2(TeleportPos[0].transform.position.x - 1, TeleportPos[0].transform.position.y - 2);
         Vector2 SecondBox = new Vector2((TeleportPos[1].transform.position.x + TeleportPos[2].transform.position.x) / 2,
-                                        TeleportPos[1].transform.position.y - 1);
+                                        TeleportPos[1].transform.position.y - 2);
         Vector2 ThirdBox = new Vector2((TeleportPos[3].transform.position.x + TeleportPos[4].transform.position.x) / 2,
-                                        TeleportPos[3].transform.position.y - 1);
-        Vector2 FourthBox = new Vector2(finish.transform.position.x, finish.transform.position.y - 1);
-        Vector2 FifthBox = new Vector2(TeleportPos[5].transform.position.x, TeleportPos[5].transform.position.y - 1);
+                                        TeleportPos[3].transform.position.y - 2);
+        Vector2 FourthBox = new Vector2(finish.transform.position.x + 2, finish.transform.position.y + 2);
+        Vector2 FifthBox = new Vector2(TeleportPos[5].transform.position.x, TeleportPos[5].transform.position.y - 2);
         Vector2 SixthBox = new Vector2((TeleportPos[6].transform.position.x + TeleportPos[7].transform.position.x) / 2,
-                                        TeleportPos[6].transform.position.y - 1);
-        Vector2 SeventhBox = new Vector2(TeleportPos[8].transform.position.x + 1, TeleportPos[8].transform.position.y - 1);
+                                        TeleportPos[6].transform.position.y - 2);
+        Vector2 SeventhBox = new Vector2(TeleportPos[8].transform.position.x + 1, TeleportPos[8].transform.position.y - 2);
         Vector2 EightBox = new Vector2((TeleportPos[9].transform.position.x + TeleportPos[10].transform.position.x) / 2,
-                                        TeleportPos[9].transform.position.y - 1);
+                                        TeleportPos[9].transform.position.y - 2);
         switch (i)
         {
             case 0:

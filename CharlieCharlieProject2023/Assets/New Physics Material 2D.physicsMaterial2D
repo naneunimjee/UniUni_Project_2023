@@ -6,6 +6,10 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:CharlieCharlieProject2023/Assets/New Physics Material 2D.physicsMaterial2D
   m_Name: New Physics Material 2D
+=======
+  m_Name: Platform
+>>>>>>> Stashed changes:CharlieCharlieProject2023/Assets/Platform.physicsMaterial2D
   friction: 0
   bounciness: 0

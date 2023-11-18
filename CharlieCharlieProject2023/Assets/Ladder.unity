@@ -449,7 +449,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 535633127}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 716a8a93c8561634287c1036abeec990, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1986,8 +1986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 23
+  gameManager: {fileID: 0}
+  jumpPower: 20
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &1395781731
 MonoBehaviour:
@@ -2343,7 +2346,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1745555199}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 716a8a93c8561634287c1036abeec990, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5031,8 +5034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 23
+  gameManager: {fileID: 0}
+  jumpPower: 20
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &2045642852
 MonoBehaviour:
