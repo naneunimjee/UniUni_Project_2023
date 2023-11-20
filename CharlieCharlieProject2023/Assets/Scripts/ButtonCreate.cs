@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonMoving : MonoBehaviour
+public class ButtonCreate : MonoBehaviour
 {
-
     Animator anim;
-    public MovingPlatform movingPlatform;
+    [SerializeField] GameObject prefab;
+
+    bool instantiate = false;
 
     void Awake()
     {
@@ -19,23 +20,24 @@ public class ButtonMoving : MonoBehaviour
         {
             anim.SetBool("ButtonHit", true);
 
-            if (movingPlatform != null)
+            if (!instantiate)
             {
-                movingPlatform.StartMoving();
+                Instantiate(prefab, new Vector3(4.5f, -10.5f, 0), Quaternion.identity);
+                instantiate = true;
             }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
+        if(collision.gameObject.tag=="Player1"|| collision.gameObject.tag == "Player2")
         {
             anim.SetBool("ButtonHit", false);
-            if (movingPlatform != null)
+            if (instantiate)
             {
-                movingPlatform.StopMoving();
+                Destroy(GameObject.FindGameObjectWithTag("Prefab")); // 태그가 Prefab인 오브젝트를 찾아 삭제
+                instantiate = false;
             }
-
         }
     }
 }

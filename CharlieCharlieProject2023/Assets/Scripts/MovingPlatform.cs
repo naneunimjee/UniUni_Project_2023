@@ -7,7 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public Transform startPos;  // 시작 위치
     public Transform endPos;    // 끝 위치
     public Transform desPos;    // 도착지의 Transform
-    public float speed;         // 발판 속도 조절
+    float speed = 2;        // 발판 속도 조절
 
     bool isMoving = false;
 

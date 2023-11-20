@@ -230,7 +230,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.7, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -389,8 +389,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!95 &116381174
 Animator:
@@ -1986,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1038611874
 Grid:
   m_ObjectHideFlags: 0
@@ -2539,8 +2542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!95 &1085579473
 Animator:
@@ -3330,7 +3336,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.7, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3893,8 +3899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &1395781731
 MonoBehaviour:
@@ -4049,7 +4058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aab068dce206274a8d15e2e1527688b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1157833580}
 --- !u!1 &1425061076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,7 +4204,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.7, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4376,7 +4384,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.7, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11910,7 +11918,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.7, y: 0.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12186,8 +12194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &2045642852
 MonoBehaviour:
