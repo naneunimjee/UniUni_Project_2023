@@ -16,6 +16,7 @@ TagManager:
   - P1_Finish
   - P2_Finish
   - Item
+  - Prefab
   layers:
   - Default
   - TransparentFX
