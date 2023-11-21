@@ -31,11 +31,15 @@ public class PlayerTeleport : MonoBehaviour
                 }
 
             }
-            MoveTo(collisionPos, index);
+        
+            if (TeleportPos.Length > 4)
+                MoveToInPortalMap(collisionPos, index);
+            else
+                MoveToInSCKMap(collisionPos, index);
         }
     }
 
-    void MoveTo(Transform Pos, int i)
+    void MoveToInPortalMap(Transform Pos, int i)
     {
         Vector2 FirstBox = new Vector2(TeleportPos[0].transform.position.x - 1, TeleportPos[0].transform.position.y - 2);
         Vector2 SecondBox = new Vector2((TeleportPos[1].transform.position.x + TeleportPos[2].transform.position.x) / 2,
@@ -84,6 +88,29 @@ public class PlayerTeleport : MonoBehaviour
                 break;
             case 10:
                 gameObject.transform.position = SecondBox;
+                break;
+        }
+    }
+
+    void MoveToInSCKMap(Transform Pos, int i)
+    {
+        switch(i)
+        {
+            case 0 :
+                gameObject.transform.position =
+                    new Vector2(TeleportPos[3].transform.position.x - 3, TeleportPos[3].transform.position.y);
+                break;
+            case 1 :
+                gameObject.transform.position =
+                    new Vector2(TeleportPos[2].transform.position.x + 3, TeleportPos[2].transform.position.y);
+                break;
+            case 2 :
+                gameObject.transform.position =
+                    new Vector2(TeleportPos[1].transform.position.x - 3, TeleportPos[1].transform.position.y);
+                break;
+            case 3 :
+                gameObject.transform.position =
+                    new Vector2(TeleportPos[0].transform.position.x + 3, TeleportPos[0].transform.position.y);
                 break;
         }
     }
