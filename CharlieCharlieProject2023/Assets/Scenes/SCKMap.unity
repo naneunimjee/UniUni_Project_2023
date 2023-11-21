@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 551953720}
   m_Layer: 0
   m_Name: P2_Ladder
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2517,7 +2517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1038611874
 Grid:
   m_ObjectHideFlags: 0
@@ -2554,6 +2554,7 @@ Transform:
   - {fileID: 1516850999}
   - {fileID: 853064674}
   - {fileID: 1246912369}
+  - {fileID: 1563967656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070671682
@@ -4606,7 +4607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1425061077
 Grid:
   m_ObjectHideFlags: 0
@@ -9587,7 +9588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563967655}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.54821837, y: -0.682742, z: -0.14057863}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9597,7 +9598,7 @@ Transform:
   - {fileID: 1797566846}
   - {fileID: 108461572}
   - {fileID: 847500621}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1038611875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629545684
 GameObject:
@@ -13119,4 +13120,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1425061078}
   - {fileID: 1038611875}
-  - {fileID: 1563967656}
