@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 551953720}
   m_Layer: 0
   m_Name: P2_Ladder
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1986,8 +1986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &1395781731
 MonoBehaviour:
@@ -5031,8 +5034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
+  maxPosition: 0
+  isclear: 0
   isLadder: 0
 --- !u!114 &2045642852
 MonoBehaviour:

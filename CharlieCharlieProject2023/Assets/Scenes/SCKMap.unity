@@ -4409,7 +4409,7 @@ Animator:
   m_GameObject: {fileID: 1395781722}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 875c6d56e8129bb43a9997c78522e2af, type: 2}
+  m_Controller: {fileID: 9100000, guid: be1fa13f4e604bf43ba64cfddae02f3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4607,7 +4607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1425061077
 Grid:
   m_ObjectHideFlags: 0
@@ -9779,7 +9779,7 @@ GameObject:
   - component: {fileID: 1745555202}
   - component: {fileID: 1745555201}
   - component: {fileID: 1745555204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
