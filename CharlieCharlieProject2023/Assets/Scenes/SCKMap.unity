@@ -393,11 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
-  maxPosition: 0
-  isclear: 0
   isLadder: 0
 --- !u!95 &116381174
 Animator:
@@ -647,7 +644,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &149319989
@@ -777,7 +774,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &195465973
@@ -953,7 +950,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &519420028
@@ -2302,7 +2299,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1038611873
@@ -2359,6 +2356,7 @@ Transform:
   - {fileID: 853064674}
   - {fileID: 1246912369}
   - {fileID: 2072665846}
+  - {fileID: 1163085973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070671682
@@ -2879,11 +2877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
-  maxPosition: 0
-  isclear: 0
   isLadder: 0
 --- !u!95 &1085579473
 Animator:
@@ -3128,7 +3123,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1157506797
@@ -3413,12 +3408,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163085972}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.08331153, y: -0.82854366, z: -0.14913818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1038611875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165397441
 GameObject:
@@ -4432,11 +4427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedea65b0ec3c64458551efdbfce8560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
-  maxPosition: 0
-  isclear: 0
   isLadder: 0
 --- !u!114 &1395781731
 MonoBehaviour:
@@ -12892,11 +12884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0708f43001e6dc64ab3ca0bb8a9e6382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
   jumpPower: 23
   maxSpeed: 6
-  maxPosition: 0
-  isclear: 0
   isLadder: 0
 --- !u!114 &2045642852
 MonoBehaviour:
@@ -13109,7 +13098,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807
@@ -13119,4 +13108,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1425061078}
   - {fileID: 1038611875}
-  - {fileID: 1163085973}
