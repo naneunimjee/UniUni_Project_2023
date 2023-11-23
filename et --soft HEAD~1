@@ -1,0 +1,127 @@
+[33mcommit 09b640d572279b1cf32c2fdef31aea658f0611b9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msongchaekang[m[33m)[m
+Author: chaekang <herry612@naver.com>
+Date:   Fri Nov 24 00:28:35 2023 +0900
+
+    송채강 기존 맵 수정
+    
+    기존 맵 수정
+
+[33mcommit d6a5c999057d2fa9e8e111040887ac30bc8adfc7[m
+Author: chaekang <herry612@naver.com>
+Date:   Mon Nov 20 19:34:14 2023 +0900
+
+    움직이는 발판 및 생성 버튼 추가
+    
+    움직이는 발판 및 생성 버튼 추가
+    하늘 언니 맵에 추가
+    Prefab 태그 추가
+
+[33mcommit 748f678529a2af5883c9fbbb5969962ca42abcc3[m
+Author: chaekang <herry612@naver.com>
+Date:   Sat Nov 18 21:52:49 2023 +0900
+
+    하늘 언니 맵 문 열기 기능 추가
+    
+    문 열기 기능 추가, MovingPlatform 내용 미약한 수정
+
+[33mcommit 6f909e6d2f8a0f80a4bc353fda9e5d7695d50ffa[m
+Author: tishakong <leehn45@naver.com>
+Date:   Sat Nov 18 17:44:50 2023 +0900
+
+    P1 색 오류 수정 / 하늘 제작 맵 업로드
+    
+    P1 색 오류 수정 / 하늘 제작 맵 업로드
+
+[33mcommit 8602738d3454af7aa2b59cbf1dac20379cf78cb3[m
+Merge: 0eb81c9 5430c5f
+Author: tishakong <145983374+tishakong@users.noreply.github.com>
+Date:   Sat Nov 18 14:47:13 2023 +0900
+
+    Merge pull request #4 from naneunimjee/tishakong
+    
+    초기화면 설정 및 작업 업로드
+
+[33mcommit 5430c5ffdee71a0de25d19a9c1c704b4309d4945[m
+Author: tishakong <leehn45@naver.com>
+Date:   Sat Nov 18 14:46:30 2023 +0900
+
+    초기화면 설정 및 작업 업로드
+    
+    UI HP 설정, 아이템 먹어야 스테이지 넘어갈 수 있는 기능(안 먹고 올 시 안내 팝업), 자잘한 애니메이션, 초기화면 설정
+
+[33mcommit 0eb81c9a16291b515c4388d9c885e8b6dae07258[m
+Merge: 0f871ff e6e7877
+Author: tishakong <145983374+tishakong@users.noreply.github.com>
+Date:   Sat Nov 18 01:39:07 2023 +0900
+
+    Merge pull request #3 from naneunimjee/revert-2-tishakong
+    
+    Revert "sky 1111 ver file"
+
+[33mcommit e6e7877d9a6c64d18abd617300425cd4011c75de[m
+Author: tishakong <145983374+tishakong@users.noreply.github.com>
+Date:   Sat Nov 18 01:38:48 2023 +0900
+
+    Revert "sky 1111 ver file"
+
+[33mcommit 0f871ff941efcf5b545e709459b7cc1c6a9b51c9[m
+Merge: 12a82fa 92a9f87
+Author: tishakong <145983374+tishakong@users.noreply.github.com>
+Date:   Sat Nov 18 01:34:34 2023 +0900
+
+    Merge pull request #2 from naneunimjee/tishakong
+    
+    sky 1111 ver file
+
+[33mcommit 92a9f87be2e3aa1d40ee5fb1ac14c2d52de0df55[m
+Author: tishakong <145983374+tishakong@users.noreply.github.com>
+Date:   Sat Nov 18 01:32:08 2023 +0900
+
+    sky 1111 ver file
+    
+    11월 11일까지 작업했던 C# 스크립트
+
+[33mcommit 12a82fa108c5e5a6767cc603dc112bc13b02c300[m
+Merge: 70845a3 b82a5ca
+Author: 임지영 <141422840+naneunimjee@users.noreply.github.com>
+Date:   Wed Nov 15 14:43:38 2023 +0900
+
+    Merge pull request #1 from naneunimjee/naneunimjee
+    
+    초기설정 구현 및 사다리맵
+
+[33mcommit b82a5ca031988d398860b9490fceb0037beb2c6f[m
+Author: 임지영 <naneunimjee1014@naver.com>
+Date:   Wed Nov 15 14:40:07 2023 +0900
+
+    사다리맵
+
+[33mcommit ccb4204ea4bcb60fa58b30795fd062696f0cc1df[m
+Author: 임지영 <naneunimjee1014@naver.com>
+Date:   Wed Nov 15 02:31:11 2023 +0900
+
+    찐 초기설정
+
+[33mcommit 3e4ff63f975b3adca8c1d61a2669eb66c72777d6[m
+Author: 임지영 <naneunimjee1014@naver.com>
+Date:   Wed Nov 15 02:23:29 2023 +0900
+
+    기본세팅
+    
+    1. 메인 카메라 위치 0,-0.5,0 및 z축 -1
+    2. 중력 4, 플레이어 점프파워 20, 맥스스피드 6
+    3. 27x48 창 가이드
+
+[33mcommit 70845a31c38d0119cffed2738435032663b4aed9[m
+Author: 임지영 <naneunimjee1014@naver.com>
+Date:   Tue Nov 14 05:34:42 2023 +0900
+
+    Create Empty Project
+    
+    드디어 성공했우 ^.^ V
+
+[33mcommit 6962da5b4ad6efed2cfad9d24da976d6c23ee20b[m
+Author: 임지영 <141422840+naneunimjee@users.noreply.github.com>
+Date:   Tue Nov 14 05:32:00 2023 +0900
+
+    Initial commit
