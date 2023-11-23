@@ -7,9 +7,11 @@ public class MovingPlatform : MonoBehaviour
     public Transform startPos;  // 시작 위치
     public Transform endPos;    // 끝 위치
     public Transform desPos;    // 도착지의 Transform
-
+<<<<<<< Updated upstream
+    public float speed;         // 발판 속도 조절
+=======
     float speed = 2;         // 발판 속도 조절
-
+>>>>>>> Stashed changes
 
     bool isMoving = false;
 
@@ -17,6 +19,11 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position = startPos.position;  // 발판은 startPos
         desPos = endPos;  // 목적지는 endPos
+<<<<<<< Updated upstream
+
+        //buttonAnim = GetComponentInChildren<Animator>();
+=======
+>>>>>>> Stashed changes
     }
 
     void FixedUpdate()
