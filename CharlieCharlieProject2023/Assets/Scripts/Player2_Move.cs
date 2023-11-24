@@ -36,9 +36,6 @@ public class Player2_Move : MonoBehaviour
             animator.SetBool("P2_isJumping", true);
         }
 
-        else if (Input.GetKey(KeyCode.DownArrow))
-            rigid.velocity = new Vector2(rigid.velocity.x, rigid.velocity.y * 0f);
-
         //미끄러짐 방지
         if (Input.GetButtonUp("Horizontal"))
         {
