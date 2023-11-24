@@ -36,11 +36,8 @@ public class Player2_Move : MonoBehaviour
             animator.SetBool("P2_isJumping", true);
         }
 
-        else if (j == -1) //아래방향키를 눌러도 힘이 가해지지 않도록 함
-        {   
-            j = 0f;
-            rigid.AddForce(Vector2.down * j, ForceMode2D.Impulse);
-        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+            rigid.velocity = new Vector2(rigid.velocity.x, rigid.velocity.y * 0f);
 
         //미끄러짐 방지
         if (Input.GetButtonUp("Horizontal"))
