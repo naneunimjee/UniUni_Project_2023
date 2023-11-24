@@ -7,36 +7,25 @@ public class ButtonLadder : MonoBehaviour
 
     Animator anim;
     public GameObject ladder;
-    private Player1_Move player1Move;
-    private Player2_Move player2Move;
     
     void Awake()
     {
         anim = GetComponent<Animator>();
-        player2Move = FindObjectOfType<Player2_Move>();
+        ladder.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 frontVec = new Vector2(transform.position.x + 0.3f, transform.position.y);
-        Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
-
-        RaycastHit2D frontHitButton = Physics2D.Raycast(frontVec, Vector2.up, 2, LayerMask.GetMask("Player"));
-
-        Vector2 backVec = new Vector2(transform.position.x - 0.3f, transform.position.y);
-        Debug.DrawRay(backVec, Vector3.down, new Color(0, 1, 0));
-
-        RaycastHit2D backHitButton = Physics2D.Raycast(backVec, Vector2.up, 2, LayerMask.GetMask("Player"));
-
-        ladder.SetActive(false);
-
-        if ((frontHitButton.collider != null || backHitButton.collider != null) && (frontHitButton.collider.CompareTag("Player") || backHitButton.collider.CompareTag("Player")))
+        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
             anim.SetBool("ButtonHit", true);
             ladder.SetActive(true);
         }
-        else
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
             anim.SetBool("ButtonHit", false);
             ladder.SetActive(false);
