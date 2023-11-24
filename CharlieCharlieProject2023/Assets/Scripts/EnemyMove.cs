@@ -1,3 +1,4 @@
+// EnemyMove.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,9 +26,21 @@ public class EnemyMove : MonoBehaviour
         rigid.velocity = new Vector2(nextMove * 2, rigid.velocity.y);
 
         //낭떠러지 감지
-        Vector2 front = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y - 1);
+        Vector2 front = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y - 0.5f);
         Debug.DrawRay(front, Vector3.down, new Color(0, 1, 0));
         RaycastHit2D rayHit = Physics2D.Raycast(front, Vector3.down, 0.2f, LayerMask.GetMask("Platform"));
+
+        // 전방 장애물 유무 확인
+        /*
+        Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
+        Debug.DrawRay(frontVec, new Vector2(nextMove, 0), new Color(1, 0, 0)); // 전방을 빨간색으로 그림
+        RaycastHit2D frontRayHit = Physics2D.Raycast(frontVec, new Vector2(nextMove, 0), 0.2f, LayerMask.GetMask("Platform"));
+
+        if(frontRayHit.collider != null)
+        {
+
+            Debug.Log("hit");
+        }*/
 
         if (rayHit.collider == null)
         {
@@ -37,6 +50,7 @@ public class EnemyMove : MonoBehaviour
             }
         }
     }
+
 
     public void Think()
     {
