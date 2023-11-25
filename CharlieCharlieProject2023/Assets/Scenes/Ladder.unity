@@ -1896,7 +1896,6 @@ GameObject:
   - component: {fileID: 1395781724}
   - component: {fileID: 1395781729}
   - component: {fileID: 1395781730}
-  - component: {fileID: 1395781731}
   - component: {fileID: 1395781732}
   m_Layer: 6
   m_Name: Player1
@@ -2038,20 +2037,6 @@ MonoBehaviour:
   maxPosition: 0
   isclear: 0
   isLadder: 0
---- !u!114 &1395781731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395781722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44679d2b5d1ad04b9d3f2de082ad711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finish: {fileID: 0}
-  TeleportPos: []
 --- !u!70 &1395781732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4990,7 +4975,6 @@ GameObject:
   - component: {fileID: 2045642845}
   - component: {fileID: 2045642850}
   - component: {fileID: 2045642851}
-  - component: {fileID: 2045642852}
   - component: {fileID: 2045642853}
   m_Layer: 7
   m_Name: Player2
@@ -5132,20 +5116,6 @@ MonoBehaviour:
   maxPosition: 0
   isclear: 0
   isLadder: 0
---- !u!114 &2045642852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045642843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44679d2b5d1ad04b9d3f2de082ad711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finish: {fileID: 0}
-  TeleportPos: []
 --- !u!70 &2045642853
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
