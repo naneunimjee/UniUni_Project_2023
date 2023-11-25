@@ -79,18 +79,28 @@ public class Player1_Move : MonoBehaviour
                 SetMaxSpeed(KeyCode.D);
         }
 
+
         if (isLadder) //사다리를 타고 있을 때
         {
+            animator.SetBool("P1_onLadder", true);
             float ver = Input.GetAxisRaw("VerticalWASD");
             rigid.gravityScale = 0;
-            rigid.velocity = new Vector2(rigid.velocity.x , ver * maxSpeed);
+            rigid.velocity = new Vector2(rigid.velocity.x, ver * maxSpeed);
+            if (rigid.velocity.y == 0)
+            {
+                animator.SetBool("P1_LadderStop", true);
+            }
+            else
+                animator.SetBool("P1_LadderStop", false);
         }
         else if (!isLadder) //사다리에서 나왔을 때
+        {
+            animator.SetBool("P1_onLadder", false);
             rigid.gravityScale = 4;
-            
+        }
 
-        //점프 착지 확인용 레이캐스트 구현
-        if (rigid.velocity.y < 0)
+            //점프 착지 확인용 레이캐스트 구현
+            if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 3, LayerMask.GetMask("Platform"));
