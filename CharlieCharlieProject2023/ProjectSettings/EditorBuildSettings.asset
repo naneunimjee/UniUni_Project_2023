@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 8270b728da9a0224f983c7c1ea4982f9
   - enabled: 1
-    path: Assets/Scenes/SkysMap.unity
-    guid: a1aa34b4f9c11dd4b903e913381d22e4
-  - enabled: 1
     path: Assets/Scenes/InfoScene.unity
     guid: 71909697dafd52a4daad1c66226e708b
+  - enabled: 1
+    path: Assets/Scenes/Ladder.unity
+    guid: bcd3fdf5d3558d64ea90f6d0839580d7
+  - enabled: 1
+    path: Assets/Scenes/SCKMap.unity
+    guid: 42c2ed3959e939647be40112846a377e
+  - enabled: 1
+    path: Assets/Scenes/Portal.unity
+    guid: 702953e2a10f9184fa5ee88a02663cfd
+  - enabled: 1
+    path: Assets/Scenes/balance.unity
+    guid: 849c79cdb4307e944b9874173689e5a6
+  - enabled: 1
+    path: Assets/Scenes/SkysMap.unity
+    guid: a1aa34b4f9c11dd4b903e913381d22e4
   m_configObjects: {}
