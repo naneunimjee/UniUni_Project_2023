@@ -10,6 +10,7 @@ public class Player2_Move : MonoBehaviour
     SpriteRenderer spriteRenderer; //플레이어 방향 전환
 
     public GameManager gameManager;
+    public AudioManager audioManager;
     public float jumpPower;
     public float maxSpeed;
     public float maxPosition; //낙하데미지 최대 위치
@@ -34,6 +35,7 @@ public class Player2_Move : MonoBehaviour
         {
             rigid.AddForce(Vector2.up * j * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P2_isJumping", true);
+            audioManager.PlaySound("Jump");
         }
 
         //미끄러짐 방지
@@ -150,6 +152,7 @@ public class Player2_Move : MonoBehaviour
             gameManager.GetItem++;
             collision.gameObject.SetActive(false);
             gameManager.isGetitem();
+            audioManager.PlaySound("Item");
         }
     }
 
@@ -184,6 +187,9 @@ public class Player2_Move : MonoBehaviour
         // 피격 애니메이션
         animator.SetTrigger("DoDamaged");
 
+        //Damaged Sound
+        audioManager.PlaySound("Damaged");
+
         //무적상태는 3초만 유지
         Invoke("OffDamaged", 3);
     }
@@ -200,6 +206,7 @@ public class Player2_Move : MonoBehaviour
         EnemyMove enemyMove = enemy.GetComponent<EnemyMove>();
         enemyMove.OnDamaged();
         rigid.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+        audioManager.PlaySound("Attack");
     }
 
     public void OnDie()

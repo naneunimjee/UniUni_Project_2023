@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int GetItem;
     public Player1_Move Player1;
     public Player2_Move Player2;
+    public AudioManager audioManager;
 
     //UI 관련 변수 생성
     public Image[] UIP1_HP;
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
                 }
             }
             stageIndex++;
+            audioManager.PlaySound("StageClear");
             SceneManager.LoadScene(stageIndex);
         }
         else //게임 클리어
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
             //재시작 버튼 UI
             TextMeshProUGUI btnText = UIRestartBtn.GetComponentInChildren<TextMeshProUGUI>();
             btnText.text = "Clear!";
+            audioManager.PlaySound("GameClear");
             UIRestartBtn.SetActive(true);
         }
     }
@@ -123,6 +126,7 @@ public class GameManager : MonoBehaviour
     {
         Player1.OnDie();
         Player2.OnDie();
+        audioManager.PlaySound("GameFail");
         UIRestartBtn.SetActive(true);
     }
 }

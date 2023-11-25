@@ -3,7 +3,18 @@ guid: 0a1b7fd957079214991c93d7980d3857
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ADItem: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
+  - ADAttack: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+  - ADUIBtnClk: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
+  - ADGameFail: {instanceID: 0}
+  - ADGameClear: {instanceID: 0}
+  - ADJump: {instanceID: 0}
+  - ADTeleport: {instanceID: 0}
+  - ADStageClear: {instanceID: 0}
+  - ADDamaged: {instanceID: 0}
+  - ADPushBtn: {instanceID: 0}
+  - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
