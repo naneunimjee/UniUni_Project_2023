@@ -90,12 +90,22 @@ public class Player2_Move : MonoBehaviour
 
         if (isLadder) //사다리를 타고 있을 때
         {
+            animator.SetBool("P2_onLadder", true);
             float ver = Input.GetAxisRaw("Vertical");
             rigid.gravityScale = 0;
-            rigid.velocity = new Vector2(rigid.velocity.x , ver * maxSpeed);
+            rigid.velocity = new Vector2(rigid.velocity.x, ver * maxSpeed);
+            if (rigid.velocity.y == 0)
+            {
+                animator.SetBool("P2_LadderStop", true);
+            }
+            else
+                animator.SetBool("P2_LadderStop", false);
         }
         else if (!isLadder) //사다리에서 나왔을 때
+        {
+            animator.SetBool("P2_onLadder", false);
             rigid.gravityScale = 4;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

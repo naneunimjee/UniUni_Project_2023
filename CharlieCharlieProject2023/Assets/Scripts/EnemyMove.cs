@@ -41,14 +41,21 @@ public class EnemyMove : MonoBehaviour
         // 전방에 장애물 감지
         Vector2 forward = new Vector2(rigid.position.x + nextMove, rigid.position.y);
         Debug.DrawRay(forward, Vector2.right * nextMove, Color.red); // 빨간색으로 표시
-        RaycastHit2D hit = Physics2D.Raycast(forward, Vector2.right * nextMove, 0.2f, LayerMask.GetMask("Platform"));
+        RaycastHit2D hit = Physics2D.Raycast(forward, Vector2.right * nextMove, 0.2f, LayerMask.GetMask("Platform"));   
 
-        if (hit.collider != null)
+        if ((hit.collider != null))
         {
             Turn();
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Turn();
+        }
+    }
 
     public void Think()
     {
