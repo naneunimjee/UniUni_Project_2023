@@ -954,9 +954,9 @@ GameObject:
   - component: {fileID: 773809724}
   - component: {fileID: 773809723}
   - component: {fileID: 773809722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button2
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2290,7 +2290,7 @@ Animator:
   m_GameObject: {fileID: 1395781722}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 875c6d56e8129bb43a9997c78522e2af, type: 2}
+  m_Controller: {fileID: 9100000, guid: be1fa13f4e604bf43ba64cfddae02f3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2508,9 +2508,9 @@ GameObject:
   - component: {fileID: 1629545689}
   - component: {fileID: 1629545691}
   - component: {fileID: 1629545690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button1
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2674,9 +2674,9 @@ GameObject:
   - component: {fileID: 1745555202}
   - component: {fileID: 1745555201}
   - component: {fileID: 1745555204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: map
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5369,7 +5369,7 @@ Animator:
   m_GameObject: {fileID: 2045642843}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdb4fc8b21567b04893e738de5c30f2b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 367d10cab8fe5834f8c2c89d844db0ef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
