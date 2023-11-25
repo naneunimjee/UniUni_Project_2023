@@ -79,14 +79,7 @@ public class Player1_Move : MonoBehaviour
                 SetMaxSpeed(KeyCode.D);
         }
 
-<<<<<<< Updated upstream
-        //사다리 타고 올라가기
-        else if (isLadder)
-        {   
-            float ver = Input.GetAxisRaw("VerticalWASD");
-            rigid.gravityScale = 0;
-            rigid.velocity = new Vector2(rigid.velocity.x, ver * maxSpeed);
-=======
+
         if (isLadder) //사다리를 타고 있을 때
         {
             animator.SetBool("P1_onLadder", true);
@@ -99,18 +92,12 @@ public class Player1_Move : MonoBehaviour
             }
             else
                 animator.SetBool("P1_LadderStop", false);
->>>>>>> Stashed changes
         }
-
         else if (!isLadder) //사다리에서 나왔을 때
         {
             animator.SetBool("P1_onLadder", false);
             rigid.gravityScale = 4;
-<<<<<<< Updated upstream
-=======
         }
->>>>>>> Stashed changes
-
 
             //점프 착지 확인용 레이캐스트 구현
             if (rigid.velocity.y < 0)

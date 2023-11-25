@@ -14,13 +14,11 @@ public class GameManager : MonoBehaviour
     public int GetItem;
     public Player1_Move Player1;
     public Player2_Move Player2;
-    public GameObject[] Stages;
 
     //UI 관련 변수 생성
     public Image[] UIP1_HP;
     public Image[] UIP2_HP;
     public Image[] UIItem;
-    public TextMeshProUGUI UIStage;
     public GameObject UIRestartBtn;
     public TextMeshProUGUI ItemMSG;
 
@@ -48,15 +46,25 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
-        //다음 스테이지 이동
-        if(stageIndex < Stages.Length-1)
-        {
-            PlayerReposition();
-            Stages[stageIndex].SetActive(false);
-            stageIndex++;
-            Stages[stageIndex].SetActive(true);
+        stageIndex = SceneManager.GetActiveScene().buildIndex;
 
-            UIStage.text = "STAGE " + (stageIndex+1);
+        if(stageIndex < SceneManager.sceneCountInBuildSettings -1)
+        {
+            if (stageIndex % 2 == 1)
+            {
+                if (P1_HP < 3)
+                {
+                    P1_HP++;
+                    UIP1_HP[P1_HP].color = new Color(1, 1, 1, 1);
+                }
+                if (P2_HP < 3)
+                {
+                    P2_HP++;
+                    UIP2_HP[P2_HP].color = new Color(1, 1, 1, 1);
+                }
+            }
+            stageIndex++;
+            SceneManager.LoadScene(stageIndex);
         }
         else //게임 클리어
         {
@@ -107,7 +115,8 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        stageIndex = 0;
+        SceneManager.LoadScene(stageIndex);
     }
 
     public void Dead()
@@ -116,13 +125,4 @@ public class GameManager : MonoBehaviour
         Player2.OnDie();
         UIRestartBtn.SetActive(true);
     }
-
-    void PlayerReposition()
-    {
-        Player1.transform.position = new Vector3(0,0,-1);
-        Player1.VelocityZero();
-        Player2.transform.position = new Vector3(0, 0, -1);
-        Player2.VelocityZero();
-    }
-
 }

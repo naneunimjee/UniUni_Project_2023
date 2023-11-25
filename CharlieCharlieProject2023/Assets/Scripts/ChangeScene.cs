@@ -10,12 +10,12 @@ public class ChangeScene : MonoBehaviour
         switch (this.gameObject.name)
         {
             case "StartBtn":
-                SceneManager.LoadScene("SkysMap");
+                SceneManager.LoadScene(2);
                 break;
-            case "InfoBtn":
+            case "InfoBtn": //InfoScene number is 1
                 SceneManager.LoadScene("InfoScene");
                 break;
-            case "BackBtn":
+            case "BackBtn": //StartMenu number is 0
                 SceneManager.LoadScene("StartMenu");
                 break;
         }
