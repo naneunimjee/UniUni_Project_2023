@@ -192,7 +192,7 @@ MonoBehaviour:
   ADJump: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
   ADTeleport: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
   ADStageClear: {fileID: 0}
-  ADDamaged: {fileID: 0}
+  ADDamaged: {fileID: 8300000, guid: 28d07c306aa084748b597d5e62f95c74, type: 3}
   ADPushBtn: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!82 &124706153
