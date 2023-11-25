@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 137683654}
   - component: {fileID: 137683653}
   m_Layer: 10
-  m_Name: Item1 (1)
+  m_Name: Item1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2112,7 +2112,7 @@ GameObject:
   - component: {fileID: 607801625}
   - component: {fileID: 607801624}
   m_Layer: 10
-  m_Name: Item2 (1)
+  m_Name: Item2
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,7 +2653,7 @@ GameObject:
   - component: {fileID: 968406229}
   - component: {fileID: 968406228}
   m_Layer: 10
-  m_Name: Item3 (1)
+  m_Name: Item3
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9914,9 +9914,9 @@ GameObject:
   - component: {fileID: 1516851002}
   - component: {fileID: 1516851001}
   - component: {fileID: 1516851000}
-  m_Layer: 0
-  m_Name: P2_Obstacle
-  m_TagString: Untagged
+  m_Layer: 11
+  m_Name: P1_Obstacle
+  m_TagString: P1_Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10637,9 +10637,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1789097076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10671,9 +10671,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793119272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10940,9 +10940,9 @@ GameObject:
   - component: {fileID: 1949456140}
   - component: {fileID: 1949456142}
   - component: {fileID: 1949456141}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Spike
-  m_TagString: Enemy
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
