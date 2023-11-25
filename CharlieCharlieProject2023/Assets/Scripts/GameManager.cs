@@ -14,7 +14,11 @@ public class GameManager : MonoBehaviour
     public int GetItem;
     public Player1_Move Player1;
     public Player2_Move Player2;
+<<<<<<< Updated upstream
     public GameObject[] Stages;
+=======
+    public UIManager UImanagers;
+>>>>>>> Stashed changes
 
     //UI 관련 변수 생성
     public Image[] UIP1_HP;
@@ -26,6 +30,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         if (Player1.isclear && Player2.isclear) //P1과 P2가 전부 피니쉬 라인 도착
         {
             if (GetItem != 3) //아이템을 다 안 먹었을 시 안내 팝업창, 다 먹었으면 다음 스테이지
@@ -51,12 +64,31 @@ public class GameManager : MonoBehaviour
         //다음 스테이지 이동
         if(stageIndex < Stages.Length-1)
         {
+<<<<<<< Updated upstream
             PlayerReposition();
             Stages[stageIndex].SetActive(false);
             stageIndex++;
             Stages[stageIndex].SetActive(true);
 
             UIStage.text = "STAGE " + (stageIndex+1);
+=======
+            if (stageIndex % 2 == 1)
+            {
+                if (P1_HP < 3)
+                {
+                    UIP1_HP[P1_HP].color = new Color(1, 1, 1, 1);
+                    P1_HP++;
+                }
+                if (P2_HP < 3)
+                {
+                    UIP2_HP[P2_HP].color = new Color(1, 1, 1, 1);
+                    P2_HP++;
+                }
+            }
+            stageIndex++;
+            Playerreposition();
+            SceneManager.LoadScene(stageIndex);
+>>>>>>> Stashed changes
         }
         else //게임 클리어
         {
@@ -117,6 +149,7 @@ public class GameManager : MonoBehaviour
         UIRestartBtn.SetActive(true);
     }
 
+<<<<<<< Updated upstream
     void PlayerReposition()
     {
         Player1.transform.position = new Vector3(0,0,-1);
@@ -125,4 +158,19 @@ public class GameManager : MonoBehaviour
         Player2.VelocityZero();
     }
 
+=======
+    public void Playerreposition()
+    {
+    switch (stageIndex.ToString())
+        {
+            case "3":
+                Player1.transform.position = new Vector3(21.36f, -9.76f, 0);
+                Player2.transform.position = new Vector3(11.09f, 9.1f, 0);
+                break;
+            case "4":
+                break;
+
+        }
+    }
+>>>>>>> Stashed changes
 }

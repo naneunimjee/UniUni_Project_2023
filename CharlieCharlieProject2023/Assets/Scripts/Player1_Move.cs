@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player1_Move : MonoBehaviour
 {
@@ -28,6 +29,15 @@ public class Player1_Move : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         //점프 구현, Player 1은 wasd로 이동, 무한점프 방지
         if (Input.GetKeyDown(KeyCode.W) && !animator.GetBool("P1_isJumping"))
         {

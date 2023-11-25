@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 394936165}
   - component: {fileID: 394936164}
   - component: {fileID: 394936163}
+  - component: {fileID: 394936168}
   - component: {fileID: 394936162}
   m_Layer: 7
   m_Name: Player2
@@ -1500,6 +1501,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394936168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394936161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44679d2b5d1ad04b9d3f2de082ad711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finish: {fileID: 0}
+  TeleportPos: []
 --- !u!1 &405012399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,9 +1609,10 @@ GameObject:
   - component: {fileID: 530989248}
   - component: {fileID: 530989247}
   - component: {fileID: 530989246}
+  - component: {fileID: 530989250}
   m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: StageUI
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1694,6 +1710,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &530989250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530989245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6225f16efe47d741998dfff124aab66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534343663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1767,7 @@ GameObject:
   - component: {fileID: 581300765}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1762,7 +1790,7 @@ MonoBehaviour:
   GetItem: 0
   Player1: {fileID: 1811638978}
   Player2: {fileID: 394936163}
-  Stages: []
+  UImanagers: {fileID: 0}
   UIP1_HP:
   - {fileID: 166718553}
   - {fileID: 1555793154}
@@ -1775,7 +1803,6 @@ MonoBehaviour:
   - {fileID: 1600787854}
   - {fileID: 390006105}
   - {fileID: 963909870}
-  UIStage: {fileID: 0}
   UIRestartBtn: {fileID: 1091180774}
   ItemMSG: {fileID: 1362299600}
 --- !u!4 &581300766
@@ -2100,9 +2127,10 @@ GameObject:
   - component: {fileID: 881436974}
   - component: {fileID: 881436973}
   - component: {fileID: 881436972}
+  - component: {fileID: 881436975}
   m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
+  m_Name: StageEventSystem
+  m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2157,6 +2185,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881436975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881436971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6225f16efe47d741998dfff124aab66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &929479446
 GameObject:
   m_ObjectHideFlags: 0
@@ -10188,6 +10228,7 @@ GameObject:
   - component: {fileID: 1811638980}
   - component: {fileID: 1811638978}
   - component: {fileID: 1811638979}
+  - component: {fileID: 1811638981}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Player1
@@ -10363,6 +10404,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1811638981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811638973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44679d2b5d1ad04b9d3f2de082ad711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finish: {fileID: 0}
+  TeleportPos: []
 --- !u!1 &1868823628
 GameObject:
   m_ObjectHideFlags: 0

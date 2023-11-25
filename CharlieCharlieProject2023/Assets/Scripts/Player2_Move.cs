@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player2_Move : MonoBehaviour
 {
@@ -28,6 +29,15 @@ public class Player2_Move : MonoBehaviour
 
     void Update() //점프 구현, 무한점프 방지, Player 2는 방향키로 이동
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         float j = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Vertical") && !animator.GetBool("P2_isJumping"))
         {
