@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 1074736327}
   m_Layer: 3
   m_Name: P1_Obstacle
-  m_TagString: Untagged
+  m_TagString: P1_Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 1391602226}
   m_Layer: 3
   m_Name: P2_Obstacle
-  m_TagString: Untagged
+  m_TagString: P2_Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
