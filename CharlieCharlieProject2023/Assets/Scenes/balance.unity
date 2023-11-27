@@ -210,9 +210,9 @@ GameObject:
   - component: {fileID: 53515212}
   - component: {fileID: 53515211}
   - component: {fileID: 53515213}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FInish_P2
-  m_TagString: Untagged
+  m_TagString: P2_Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,8 @@ GameObject:
   - component: {fileID: 197190066}
   - component: {fileID: 197190068}
   - component: {fileID: 197190067}
-  m_Layer: 3
+  - component: {fileID: 197190069}
+  m_Layer: 12
   m_Name: obstacle_P2
   m_TagString: P2_Obstacle
   m_Icon: {fileID: 0}
@@ -724,6 +725,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &197190069
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197190065}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &234560526
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +772,8 @@ GameObject:
   - component: {fileID: 234560527}
   - component: {fileID: 234560529}
   - component: {fileID: 234560528}
-  m_Layer: 3
+  - component: {fileID: 234560530}
+  m_Layer: 11
   m_Name: obstacle_P1
   m_TagString: P1_Obstacle
   m_Icon: {fileID: 0}
@@ -942,6 +980,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &234560530
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234560526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &339744297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,7 +4590,8 @@ GameObject:
   - component: {fileID: 1054540719}
   - component: {fileID: 1054540721}
   - component: {fileID: 1054540720}
-  m_Layer: 0
+  - component: {fileID: 1054540722}
+  m_Layer: 11
   m_Name: obstacle_P1_floor
   m_TagString: P1_Obstacle
   m_Icon: {fileID: 0}
@@ -4863,6 +4938,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1054540722
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054540718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1091449326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,7 +5495,7 @@ GameObject:
   - component: {fileID: 1263556021}
   - component: {fileID: 1263556020}
   - component: {fileID: 1263556019}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FInish_P1
   m_TagString: P1_Finish
   m_Icon: {fileID: 0}
@@ -5778,7 +5889,8 @@ GameObject:
   - component: {fileID: 1381372530}
   - component: {fileID: 1381372532}
   - component: {fileID: 1381372531}
-  m_Layer: 0
+  - component: {fileID: 1381372533}
+  m_Layer: 12
   m_Name: obstacle_P2_floor
   m_TagString: P2_Obstacle
   m_Icon: {fileID: 0}
@@ -6129,6 +6241,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1381372533
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381372529}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1395781722
 GameObject:
   m_ObjectHideFlags: 0
