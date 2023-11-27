@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
     public int stageIndex;
-    public int P1_HP;
-    public int P2_HP;
+    public static int P1_HP;
+    public static int P2_HP;
     public int GetItem;
     public Player1_Move Player1;
     public Player2_Move Player2;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+
         if (Player1.isclear && Player2.isclear) //P1과 P2가 전부 피니쉬 라인 도착
         {
             if (GetItem != 3) //아이템을 다 안 먹었을 시 안내 팝업창, 다 먹었으면 다음 스테이지
@@ -44,6 +46,17 @@ public class GameManager : MonoBehaviour
             ItemMSG.text = "";
         }
     }
+    public void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            P1_HP = P2_HP = 3;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex > 2)
+        {
+            UIupdate();
+        }
+    }
 
     public void NextStage()
     {
@@ -56,12 +69,10 @@ public class GameManager : MonoBehaviour
                 if (P1_HP < 3)
                 {
                     P1_HP++;
-                    UIP1_HP[P1_HP].color = new Color(1, 1, 1, 1);
                 }
                 if (P2_HP < 3)
                 {
                     P2_HP++;
-                    UIP2_HP[P2_HP].color = new Color(1, 1, 1, 1);
                 }
             }
             stageIndex++;
@@ -129,4 +140,18 @@ public class GameManager : MonoBehaviour
         audioManager.PlaySound("GameFail");
         UIRestartBtn.SetActive(true);
     }
+
+    public void UIupdate()
+    {
+        if (P1_HP < 2)
+            UIP1_HP[1].color = new Color(1, 1, 1, 0.2f);
+        if (P1_HP < 3)
+            UIP1_HP[2].color = new Color(1, 1, 1, 0.2f);
+        if (P2_HP < 2)
+            UIP2_HP[1].color = new Color(1, 1, 1, 0.2f);
+        if (P2_HP < 3)
+            UIP2_HP[2].color = new Color(1, 1, 1, 0.2f);
+
+    }
+
 }

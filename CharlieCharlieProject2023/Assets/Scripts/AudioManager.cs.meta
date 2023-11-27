@@ -7,12 +7,12 @@ MonoImporter:
   - ADItem: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
   - ADAttack: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
   - ADUIBtnClk: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
-  - ADGameFail: {instanceID: 0}
-  - ADGameClear: {instanceID: 0}
-  - ADJump: {instanceID: 0}
-  - ADTeleport: {instanceID: 0}
+  - ADGameFail: {fileID: 8300000, guid: c8b1d2a6d011c784081cc9e718489ff1, type: 3}
+  - ADGameClear: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
+  - ADJump: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
+  - ADTeleport: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
   - ADStageClear: {instanceID: 0}
-  - ADDamaged: {instanceID: 0}
+  - ADDamaged: {fileID: 8300000, guid: 28d07c306aa084748b597d5e62f95c74, type: 3}
   - ADPushBtn: {instanceID: 0}
   - audioSource: {instanceID: 0}
   executionOrder: 0
