@@ -3978,7 +3978,7 @@ GameObject:
   - component: {fileID: 1054540719}
   - component: {fileID: 1054540721}
   - component: {fileID: 1054540720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: obstacle_P1_floor
   m_TagString: P1_Obstacle
   m_Icon: {fileID: 0}
@@ -5013,7 +5013,7 @@ GameObject:
   - component: {fileID: 1381372530}
   - component: {fileID: 1381372532}
   - component: {fileID: 1381372531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: obstacle_P2_floor
   m_TagString: P2_Obstacle
   m_Icon: {fileID: 0}

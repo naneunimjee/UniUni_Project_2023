@@ -36,6 +36,12 @@ public class Player2_Move : MonoBehaviour
             animator.SetBool("P2_isJumping", true);
         }
 
+        //아래 방향으로 가해지는 힘 제거
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x , rigid.velocity.normalized.y);
+        }
+
         //미끄러짐 방지
         if (Input.GetButtonUp("Horizontal"))
         {
