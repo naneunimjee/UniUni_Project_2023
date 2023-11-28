@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class Player1_Move : MonoBehaviour
     public float jumpPower;
     public float maxSpeed;
     public float maxPosition; //낙하데미지 최대 위치
+    public bool isfall; //낙하 여부 확인
     public bool isclear; //클리어 지점 도착 여부 확인용 
     public bool isLadder;
     private float ver; //사다리를 오를 때, w = 1, s = -1를 저장해두기 위한 변수
@@ -27,6 +29,12 @@ public class Player1_Move : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
+    void Start()
+    {
+        maxPosition = transform.position.y;
+        isfall = false;
+    }
+
     void Update()
     {
         //점프 구현, Player 1은 wasd로 이동, 무한점프 방지
@@ -35,6 +43,12 @@ public class Player1_Move : MonoBehaviour
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P1_isJumping", true);
             audioManager.PlaySound("Jump");
+        }
+        
+        //높은 곳에서 떨어질때 모션 구현
+        if (rigid.velocity.y<0)
+        {
+            animator.SetBool("P1_isJumping", true);
         }
 
         //미끄러짐 방지
@@ -60,7 +74,28 @@ public class Player1_Move : MonoBehaviour
         {
             animator.SetBool("P1_isWalking", true);
         }
-     }
+
+        //낙하데미지 구현
+        if (!animator.GetBool("P1_isJumping")) //땅에 있을 때
+        {
+            if (isfall == true)
+            {
+                OnDamaged(rigid.transform.position);
+                maxPosition = transform.position.y;
+                isfall = false;
+            }
+            if (rigid.velocity.y == 0)
+            {
+                maxPosition = transform.position.y;
+            }
+        }
+
+        if (maxPosition > transform.position.y && Math.Abs(maxPosition - transform.position.y) > 10)
+        {
+            isfall = true;
+        }
+
+    }
 
     void FixedUpdate()
     {
