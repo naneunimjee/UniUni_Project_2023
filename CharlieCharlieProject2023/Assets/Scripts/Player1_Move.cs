@@ -123,7 +123,7 @@ public class Player1_Move : MonoBehaviour
             float ver = Input.GetAxisRaw("VerticalWASD");
             rigid.gravityScale = 0;
             rigid.velocity = new Vector2(rigid.velocity.x, ver * maxSpeed);
-            if (rigid.velocity.y == 0)
+            if (Mathf.Approximately(rigid.velocity.y, 0))
             {
                 animator.SetBool("P1_LadderStop", true);
             }
@@ -133,6 +133,7 @@ public class Player1_Move : MonoBehaviour
         else if (!isLadder) //사다리에서 나왔을 때
         {
             animator.SetBool("P1_onLadder", false);
+            animator.SetBool("P1_LadderStop", false);
             rigid.gravityScale = 4;
         }
 
