@@ -138,6 +138,7 @@ public class Player2_Move : MonoBehaviour
         else if (!isLadder) //사다리에서 나왔을 때
         {
             animator.SetBool("P2_onLadder", false);
+            animator.SetBool("P2_LadderStop", false);
             rigid.gravityScale = 4;
         }
     }
@@ -165,6 +166,14 @@ public class Player2_Move : MonoBehaviour
             //장애물, P2_장애물과 태그됐을 때 데미지 받음
             OnDamaged(collision.transform.position);
         }
+
+        /*
+        // 플랫폼에 서 있을 때는 사다리 off
+        if(collision.gameObject.tag == "Platform")
+        {
+            animator.SetBool("P2_onLadder", false);
+            animator.SetBool("P2_LadderStop", false);
+        }*/
     }
 
     void OnTriggerEnter2D(Collider2D collision)
