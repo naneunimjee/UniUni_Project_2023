@@ -138,11 +138,11 @@ public class Player1_Move : MonoBehaviour
         }
 
             //점프 착지 확인용 레이캐스트 구현
-            if (rigid.velocity.y < 0)
+        if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 3, LayerMask.GetMask("Platform"));
-            if (rayHit.collider != null) //플랫폼이 레이캐스트에 닿으면 (땅에 인접하면)
+            if (rayHit.collider != null)    //플랫폼이 레이캐스트에 닿으면 (땅에 인접하면)
             {
                 if (rayHit.distance < 1)
                 {

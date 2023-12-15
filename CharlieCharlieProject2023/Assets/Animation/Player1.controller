@@ -371,14 +371,14 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: DoDamaged
-    m_Type: 9
+  - m_Name: P1_LadderStop
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: P1_LadderStop
-    m_Type: 4
+  - m_Name: DoDamaged
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -435,13 +435,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6337340148499298806}
-    m_Position: {x: 710, y: 190, z: 0}
+    m_Position: {x: 710, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1544250199851541725}
     m_Position: {x: 370, y: 560, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6827626067371398855}
-    m_Position: {x: 40, y: 190, z: 0}
+    m_Position: {x: 40, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3740530713690280433}
     m_Position: {x: 80, y: 20, z: 0}
