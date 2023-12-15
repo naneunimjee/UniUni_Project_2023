@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
+    public bool IsPause=false;
     public int stageIndex;
     public static int P1_HP;
     public static int P2_HP;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Image[] UIP2_HP;
     public Image[] UIItem;
     public GameObject UIRestartBtn;
+    public GameObject UIClearBtn;
     public TextMeshProUGUI ItemMSG;
 
     private void Update()
@@ -45,7 +47,26 @@ public class GameManager : MonoBehaviour
         {//누군가 피니쉬 라인을 벗어나면 아이템 미획득 안내창 삭제
             ItemMSG.text = "";
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && IsPause == false)
+        {
+            Time.timeScale = 0;
+            UIRestartBtn.SetActive(true);
+            IsPause = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && IsPause == true)
+        {
+            Time.timeScale = 1;
+            UIRestartBtn.SetActive(false);
+            IsPause = false;
+        }
     }
+
+    private void FixedUpdate()
+    {
+       
+    }
+
     public void Start()
     {
         if (SceneManager.GetActiveScene().buildIndex == 2)
@@ -86,10 +107,8 @@ public class GameManager : MonoBehaviour
             //결과 화면 UI
             Debug.Log("게임 클리어!");
             //재시작 버튼 UI
-            TextMeshProUGUI btnText = UIRestartBtn.GetComponentInChildren<TextMeshProUGUI>();
-            btnText.text = "Clear!";
             audioManager.PlaySound("GameClear");
-            UIRestartBtn.SetActive(true);
+            UIClearBtn.SetActive(true);
         }
     }
 
@@ -153,5 +172,4 @@ public class GameManager : MonoBehaviour
             UIP2_HP[2].color = new Color(1, 1, 1, 0.2f);
 
     }
-
 }
