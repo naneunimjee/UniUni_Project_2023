@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Image[] UIItem;
     public GameObject UIRestartBtn;
     public TextMeshProUGUI ItemMSG;
+    public GameObject EndingMent;
 
     private void Update()
     {
@@ -89,7 +90,12 @@ public class GameManager : MonoBehaviour
             TextMeshProUGUI btnText = UIRestartBtn.GetComponentInChildren<TextMeshProUGUI>();
             btnText.text = "Clear!";
             audioManager.PlaySound("GameClear");
+<<<<<<< Updated upstream
             UIRestartBtn.SetActive(true);
+=======
+            EndingMent.SetActive(true);
+            UIClearBtn.SetActive(true);
+>>>>>>> Stashed changes
         }
     }
 
