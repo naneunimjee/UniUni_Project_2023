@@ -169,7 +169,10 @@ public class Player2_Move : MonoBehaviour
 
         /*
         // 플랫폼에 서 있을 때는 사다리 off
-        if(collision.gameObject.tag == "Platform")
+        string platformLayerName = "Platform";
+        int collidedLayer = collision.gameObject.layer;
+
+        if (LayerMask.LayerToName(collidedLayer) == platformLayerName)
         {
             animator.SetBool("P2_onLadder", false);
             animator.SetBool("P2_LadderStop", false);
