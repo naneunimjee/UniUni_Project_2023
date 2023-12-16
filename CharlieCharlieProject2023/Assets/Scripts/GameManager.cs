@@ -18,20 +18,21 @@ public class GameManager : MonoBehaviour
     public Player2_Move Player2;
     public AudioManager audioManager;
 
-    //UI °ü·Ã º¯¼ö »ı¼º
+    //UI ê´€ë ¨ ë³€ìˆ˜ ìƒì„±
     public Image[] UIP1_HP;
     public Image[] UIP2_HP;
     public Image[] UIItem;
     public GameObject UIRestartBtn;
     public GameObject UIClearBtn;
     public TextMeshProUGUI ItemMSG;
+    public GameObject EndingMent;
 
     private void Update()
     {
 
-        if (Player1.isclear && Player2.isclear) //P1°ú P2°¡ ÀüºÎ ÇÇ´Ï½¬ ¶óÀÎ µµÂø
+        if (Player1.isclear && Player2.isclear) //P1ê³¼ P2ê°€ ì „ë¶€ í”¼ë‹ˆì‰¬ ë¼ì¸ ë„ì°©
         {
-            if (GetItem != 3) //¾ÆÀÌÅÛÀ» ´Ù ¾È ¸Ô¾úÀ» ½Ã ¾È³» ÆË¾÷Ã¢, ´Ù ¸Ô¾úÀ¸¸é ´ÙÀ½ ½ºÅ×ÀÌÁö
+            if (GetItem != 3) //ì•„ì´í…œì„ ë‹¤ ì•ˆ ë¨¹ì—ˆì„ ì‹œ ì•ˆë‚´ íŒì—…ì°½, ë‹¤ ë¨¹ì—ˆìœ¼ë©´ ë‹¤ìŒ ìŠ¤í…Œì´ì§€
             {
                 ItemMSG.text="You must get all item";
             }
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
             }
         }
         else
-        {//´©±º°¡ ÇÇ´Ï½¬ ¶óÀÎÀ» ¹ş¾î³ª¸é ¾ÆÀÌÅÛ ¹ÌÈ¹µæ ¾È³»Ã¢ »èÁ¦
+        {//ëˆ„êµ°ê°€ í”¼ë‹ˆì‰¬ ë¼ì¸ì„ ë²—ì–´ë‚˜ë©´ ì•„ì´í…œ ë¯¸íšë“ ì•ˆë‚´ì°½ ì‚­ì œ
             ItemMSG.text = "";
         }
 
@@ -95,19 +96,24 @@ public class GameManager : MonoBehaviour
             audioManager.PlaySound("StageClear");
             SceneManager.LoadScene(stageIndex);
         }
-        else //°ÔÀÓ Å¬¸®¾î
+        else //ê²Œì„ í´ë¦¬ì–´
         {
-            //½Ã°£ Á¤Áö
+            //ì‹œê°„ ì •ì§€
             Time.timeScale = 0;
-            //°á°ú È­¸é UI
-            Debug.Log("°ÔÀÓ Å¬¸®¾î!");
-            //Àç½ÃÀÛ ¹öÆ° UI
+            //ê²°ê³¼ í™”ë©´ UI
+            Debug.Log("ê²Œì„ í´ë¦¬ì–´!");
+            //ì¬ì‹œì‘ ë²„íŠ¼ UI
             audioManager.PlaySound("GameClear");
+
+            UIRestartBtn.SetActive(true);
+
+            EndingMent.SetActive(true);
             UIClearBtn.SetActive(true);
+
         }
     }
 
-    public void P1_HealthDown() //ÇÃ·¹ÀÌ¾î 1 Ã¼·Â ¼öÄ¡ ¹× UI °ü¸®, Á×À½½Ã dead ¾Ö´Ï¸ŞÀÌ¼Ç°ú restart ¹öÆ° È£Ãâ
+    public void P1_HealthDown() //í”Œë ˆì´ì–´ 1 ì²´ë ¥ ìˆ˜ì¹˜ ë° UI ê´€ë¦¬, ì£½ìŒì‹œ dead ì• ë‹ˆë©”ì´ì…˜ê³¼ restart ë²„íŠ¼ í˜¸ì¶œ
     {
         if (P1_HP > 1)
         {
@@ -121,7 +127,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void P2_HealthDown() //ÇÃ·¹ÀÌ¾î 2 Ã¼·Â ¼öÄ¡ ¹× UI °ü¸®, Á×À½½Ã dead ¾Ö´Ï¸ŞÀÌ¼Ç°ú restart ¹öÆ° È£Ãâ
+    public void P2_HealthDown() //í”Œë ˆì´ì–´ 2 ì²´ë ¥ ìˆ˜ì¹˜ ë° UI ê´€ë¦¬, ì£½ìŒì‹œ dead ì• ë‹ˆë©”ì´ì…˜ê³¼ restart ë²„íŠ¼ í˜¸ì¶œ
     {
         if (P2_HP > 1)
         {
@@ -135,7 +141,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void isGetitem() //¾ÆÀÌÅÛ UI °ü¸®
+    public void isGetitem() //ì•„ì´í…œ UI ê´€ë¦¬
     {
         UIItem[GetItem-1].color = new Color(1, 1, 1, 1);
     }
