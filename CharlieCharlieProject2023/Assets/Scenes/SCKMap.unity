@@ -338,6 +338,7 @@ MonoBehaviour:
   doors:
   - {fileID: 1157506794}
   - {fileID: 372125676}
+  audioManager: {fileID: 1998528750}
 --- !u!95 &59628538
 Animator:
   serializedVersion: 5
@@ -922,6 +923,7 @@ MonoBehaviour:
   - {fileID: 108461571}
   player1: {fileID: 1085579472}
   player2: {fileID: 116381173}
+  audioManager: {fileID: 1998528750}
 --- !u!114 &116381173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1799850150}
-  audioManager: {fileID: 1998528748}
+  audioManager: {fileID: 1998528750}
   jumpPower: 20
   maxSpeed: 6
   maxPosition: 0
@@ -4092,7 +4094,7 @@ Transform:
   m_GameObject: {fileID: 1085579468}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.36, y: -9.76, z: 0}
+  m_LocalPosition: {x: 22.01, y: -9.76, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4153,6 +4155,7 @@ MonoBehaviour:
   - {fileID: 108461571}
   player1: {fileID: 1085579472}
   player2: {fileID: 116381173}
+  audioManager: {fileID: 1998528750}
 --- !u!114 &1085579472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4166,7 +4169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1799850150}
-  audioManager: {fileID: 1998528748}
+  audioManager: {fileID: 1998528750}
   jumpPower: 20
   maxSpeed: 6
   maxPosition: 0
@@ -5125,6 +5128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 195465970}
+  audioManager: {fileID: 1998528750}
 --- !u!1 &1394840564
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,6 +5428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingPlatform: {fileID: 951107276}
+  audioManager: {fileID: 1998528750}
 --- !u!1 &1433360917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,6 +5478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 2112879103}
+  audioManager: {fileID: 1998528750}
 --- !u!95 &1433360920
 Animator:
   serializedVersion: 5
@@ -11759,6 +11765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingPlatform: {fileID: 149319985}
+  audioManager: {fileID: 1998528750}
 --- !u!95 &1776510869
 Animator:
   serializedVersion: 5
@@ -12146,7 +12153,7 @@ MonoBehaviour:
   GetItem: 0
   Player1: {fileID: 1085579472}
   Player2: {fileID: 116381173}
-  audioManager: {fileID: 1998528748}
+  audioManager: {fileID: 0}
   UIP1_HP:
   - {fileID: 1998298850}
   - {fileID: 84658222}
@@ -12580,8 +12587,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998528749}
-  - component: {fileID: 1998528748}
   - component: {fileID: 1998528747}
+  - component: {fileID: 1998528750}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -12685,7 +12692,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1998528748
+--- !u!4 &1998528749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998528746}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998528750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12704,25 +12726,10 @@ MonoBehaviour:
   ADGameClear: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   ADJump: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
   ADTeleport: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
-  ADStageClear: {fileID: 0}
+  ADStageClear: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   ADDamaged: {fileID: 8300000, guid: 28d07c306aa084748b597d5e62f95c74, type: 3}
-  ADPushBtn: {fileID: 0}
+  ADPushBtn: {fileID: 8300000, guid: becf2d19fedff7b479581f8ea2716d3c, type: 3}
   audioSource: {fileID: 0}
---- !u!4 &1998528749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998528746}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047335525
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject[] TeleportPos;
     public Player1_Move player1;
     public Player2_Move player2;
+    public AudioManager audioManager;
 
     void Awake()
     {
@@ -33,6 +34,7 @@ public class PlayerTeleport : MonoBehaviour
                 }
 
             }
+            audioManager.PlaySound("Teleport");
             if (TeleportPos.Length > 4)
                 MoveToInPortalMap(collisionPos, index);
             else

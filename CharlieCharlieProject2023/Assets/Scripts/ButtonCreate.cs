@@ -6,6 +6,7 @@ public class ButtonCreate : MonoBehaviour
 {
     Animator anim;
     [SerializeField] GameObject prefab;
+    public AudioManager audioManager;
 
     bool player1_OnButton = false;
     bool player2_OnButton = false;
@@ -22,6 +23,7 @@ public class ButtonCreate : MonoBehaviour
         if (player1_OnButton || player2_OnButton)
         {
             anim.SetBool("ButtonHit", true);
+            audioManager.PlaySound("PushBtn");
 
             if (!instantiate)
             {

@@ -37,6 +37,7 @@ public class ButtonLadder : MonoBehaviour
         if (player1_OnButton || player2_OnButton)
         {
             anim.SetBool("ButtonHit", true);
+            audioManager.PlaySound("PushBtn");
             ladder.SetActive(true);
         }
         else
@@ -50,7 +51,6 @@ public class ButtonLadder : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
-            audioManager.PlaySound("PushBtn");
             SetPlayerButtonState(collision, true);
         }
     }
