@@ -26,6 +26,7 @@ public class CharlieManager : MonoBehaviour
     {   
         audioManager.PlaySound("Jump");
         rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        animator.SetBool("P1_isJumping", true);
     }
 
 }
