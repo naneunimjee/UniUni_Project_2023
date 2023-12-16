@@ -36,7 +36,7 @@ public class Player2_Move : MonoBehaviour
 
     void Update() //점프 구현, 무한점프 방지, Player 2는 방향키로 이동
     {        
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !animator.GetBool("P2_isJumping"))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !animator.GetBool("P2_isJumping") && !animator.GetBool("P2_onLadder"))
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P2_isJumping", true);

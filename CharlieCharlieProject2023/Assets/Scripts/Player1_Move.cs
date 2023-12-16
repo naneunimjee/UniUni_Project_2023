@@ -38,7 +38,7 @@ public class Player1_Move : MonoBehaviour
     void Update()
     {
         //점프 구현, Player 1은 wasd로 이동, 무한점프 방지
-        if (Input.GetKeyDown(KeyCode.W) && !animator.GetBool("P1_isJumping"))
+        if (Input.GetKeyDown(KeyCode.W) && !animator.GetBool("P1_isJumping")&&!animator.GetBool("P1_onLadder"))
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P1_isJumping", true);
