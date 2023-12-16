@@ -106,7 +106,6 @@ public class GameManager : MonoBehaviour
             audioManager.PlaySound("GameClear");
 
             UIRestartBtn.SetActive(true);
-
             EndingMent.SetActive(true);
             UIClearBtn.SetActive(true);
 

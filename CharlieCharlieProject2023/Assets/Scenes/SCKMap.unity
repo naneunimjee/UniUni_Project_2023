@@ -12153,7 +12153,7 @@ MonoBehaviour:
   GetItem: 0
   Player1: {fileID: 1085579472}
   Player2: {fileID: 116381173}
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1998528750}
   UIP1_HP:
   - {fileID: 1998298850}
   - {fileID: 84658222}
@@ -12169,6 +12169,7 @@ MonoBehaviour:
   UIRestartBtn: {fileID: 1394840564}
   UIClearBtn: {fileID: 2094691366}
   ItemMSG: {fileID: 788354431}
+  EndingMent: {fileID: 0}
 --- !u!4 &1799850151
 Transform:
   m_ObjectHideFlags: 0
