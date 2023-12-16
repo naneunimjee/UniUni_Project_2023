@@ -1521,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ladder: {fileID: 1157833577}
+  audioManager: {fileID: 1296601698}
 --- !u!212 &773809725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3071,9 +3072,9 @@ MonoBehaviour:
   ADGameClear: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   ADJump: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
   ADTeleport: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
-  ADStageClear: {fileID: 0}
+  ADStageClear: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   ADDamaged: {fileID: 8300000, guid: 28d07c306aa084748b597d5e62f95c74, type: 3}
-  ADPushBtn: {fileID: 0}
+  ADPushBtn: {fileID: 8300000, guid: becf2d19fedff7b479581f8ea2716d3c, type: 3}
   audioSource: {fileID: 0}
 --- !u!4 &1296601699
 Transform:
@@ -3730,6 +3731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finish: {fileID: 0}
   TeleportPos: []
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!70 &1395781732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4149,6 +4152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ladder: {fileID: 551953718}
+  audioManager: {fileID: 1296601698}
 --- !u!95 &1629545690
 Animator:
   serializedVersion: 5
@@ -7178,6 +7182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finish: {fileID: 0}
   TeleportPos: []
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!70 &2045642853
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
