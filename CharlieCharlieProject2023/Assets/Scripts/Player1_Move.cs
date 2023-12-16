@@ -209,6 +209,11 @@ void OnCollisionEnter2D(Collision2D collision)
             audioManager.PlaySound("Item");
         }
 
+        if (collision.CompareTag("P1_Obstacle"))
+        {
+            //장애물, P1_장애물과 태그됐을 때 데미지 받음
+            OnDamaged(collision.transform.position);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

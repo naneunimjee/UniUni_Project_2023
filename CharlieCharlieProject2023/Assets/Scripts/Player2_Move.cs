@@ -195,6 +195,12 @@ public class Player2_Move : MonoBehaviour
             gameManager.isGetitem();
             audioManager.PlaySound("Item");
         }
+
+        if (collision.CompareTag("P2_Obstacle"))
+        {
+            //장애물, P2_장애물과 태그됐을 때 데미지 받음
+            OnDamaged(collision.transform.position);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

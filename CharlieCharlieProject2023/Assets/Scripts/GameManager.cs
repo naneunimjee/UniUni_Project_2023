@@ -62,11 +62,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-       
-    }
-
     public void Start()
     {
         if (SceneManager.GetActiveScene().buildIndex == 2)
