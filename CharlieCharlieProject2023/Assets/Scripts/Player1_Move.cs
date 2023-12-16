@@ -38,7 +38,7 @@ public class Player1_Move : MonoBehaviour
     void Update()
     {
         //점프 구현, Player 1은 wasd로 이동, 무한점프 방지
-        if (Input.GetKeyDown(KeyCode.W) && !animator.GetBool("P1_isJumping"))
+        if (Input.GetKeyDown(KeyCode.W) && !animator.GetBool("P1_isJumping")&&!animator.GetBool("P1_onLadder"))
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P1_isJumping", true);
@@ -209,6 +209,11 @@ void OnCollisionEnter2D(Collision2D collision)
             audioManager.PlaySound("Item");
         }
 
+        if (collision.CompareTag("P1_Obstacle"))
+        {
+            //장애물, P1_장애물과 태그됐을 때 데미지 받음
+            OnDamaged(collision.transform.position);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

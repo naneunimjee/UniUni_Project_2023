@@ -7,6 +7,7 @@ public class DestroyButton : MonoBehaviour
 
     Animator anim;
     [SerializeField] GameObject[] doors;
+    public AudioManager audioManager;
 
     bool player1OnButton = false;
     bool player2OnButton = false;
@@ -21,6 +22,7 @@ public class DestroyButton : MonoBehaviour
         if (player1OnButton || player2OnButton)
         {
             anim.SetBool("ButtonHit", true);
+            audioManager.PlaySound("PushBtn");
 
             foreach (GameObject door in doors)
             {

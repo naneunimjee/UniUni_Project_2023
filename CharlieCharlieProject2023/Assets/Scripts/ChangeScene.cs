@@ -20,4 +20,9 @@ public class ChangeScene : MonoBehaviour
                 break;
         }
     }
+
+    public void ItemChange()
+    {
+        public int ItemIndex;
+    }
 }

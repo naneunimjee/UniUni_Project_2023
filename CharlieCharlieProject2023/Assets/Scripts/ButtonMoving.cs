@@ -7,6 +7,7 @@ public class ButtonMoving : MonoBehaviour
 
     Animator anim;
     public MovingPlatform movingPlatform;
+    public AudioManager audioManager;
 
     bool Player1_OnButton = false;
     bool Player2_OnButton = false;
@@ -35,6 +36,7 @@ public class ButtonMoving : MonoBehaviour
         if (Player1_OnButton || Player2_OnButton)
         {
             anim.SetBool("ButtonHit", true);
+            audioManager.PlaySound("PushBtn");
 
             if (movingPlatform != null)
             {
