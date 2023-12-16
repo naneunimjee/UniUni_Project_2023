@@ -105,7 +105,6 @@ public class GameManager : MonoBehaviour
             //재시작 버튼 UI
             audioManager.PlaySound("GameClear");
 
-            UIRestartBtn.SetActive(true);
             EndingMent.SetActive(true);
             UIClearBtn.SetActive(true);
 
