@@ -923,6 +923,7 @@ MonoBehaviour:
   - {fileID: 108461571}
   player1: {fileID: 1085579472}
   player2: {fileID: 116381173}
+  audioManager: {fileID: 1998528750}
 --- !u!114 &116381173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,6 +4155,7 @@ MonoBehaviour:
   - {fileID: 108461571}
   player1: {fileID: 1085579472}
   player2: {fileID: 116381173}
+  audioManager: {fileID: 1998528750}
 --- !u!114 &1085579472
 MonoBehaviour:
   m_ObjectHideFlags: 0

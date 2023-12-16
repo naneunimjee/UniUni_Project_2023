@@ -7513,6 +7513,7 @@ MonoBehaviour:
   - {fileID: 1540846889}
   player1: {fileID: 1395781731}
   player2: {fileID: 2045642852}
+  audioManager: {fileID: 926910104}
 --- !u!114 &1395781731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12109,6 +12110,7 @@ MonoBehaviour:
   - {fileID: 1540846889}
   player1: {fileID: 1395781731}
   player2: {fileID: 2045642852}
+  audioManager: {fileID: 926910104}
 --- !u!114 &2045642852
 MonoBehaviour:
   m_ObjectHideFlags: 0
