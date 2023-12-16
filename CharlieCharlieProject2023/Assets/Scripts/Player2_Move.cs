@@ -35,12 +35,10 @@ public class Player2_Move : MonoBehaviour
     }
 
     void Update() //점프 구현, 무한점프 방지, Player 2는 방향키로 이동
-    {
-        float j = Input.GetAxisRaw("Vertical");
-        
-        if (Input.GetButtonDown("Vertical") && !animator.GetBool("P2_isJumping"))
+    {        
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !animator.GetBool("P2_isJumping"))
         {
-            rigid.AddForce(Vector2.up * j * jumpPower, ForceMode2D.Impulse);
+            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             animator.SetBool("P2_isJumping", true);
             audioManager.PlaySound("Jump");
         }
