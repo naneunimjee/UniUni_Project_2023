@@ -7,6 +7,8 @@ public class PlayerTeleport : MonoBehaviour
     BoxCollider2D boxcollider;
     public GameObject finish;
     public GameObject[] TeleportPos;
+    public Player1_Move player1;
+    public Player2_Move player2;
 
     void Awake()
     {
@@ -31,7 +33,6 @@ public class PlayerTeleport : MonoBehaviour
                 }
 
             }
-        
             if (TeleportPos.Length > 4)
                 MoveToInPortalMap(collisionPos, index);
             else
@@ -90,6 +91,7 @@ public class PlayerTeleport : MonoBehaviour
                 gameObject.transform.position = SecondBox;
                 break;
         }
+        player1.maxPosition = player2.maxPosition = 0;
     }
 
     void MoveToInSCKMap(Transform Pos, int i)
@@ -113,5 +115,6 @@ public class PlayerTeleport : MonoBehaviour
                     new Vector2(TeleportPos[0].transform.position.x + 3, TeleportPos[0].transform.position.y);
                 break;
         }
+        player1.maxPosition = player2.maxPosition = 0;
     }
 }
