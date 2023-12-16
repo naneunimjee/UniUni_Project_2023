@@ -1177,7 +1177,12 @@ GameObject:
   - component: {fileID: 727105445}
   - component: {fileID: 727105444}
   - component: {fileID: 727105443}
+<<<<<<< Updated upstream
   m_Layer: 3
+=======
+  - component: {fileID: 727105449}
+  m_Layer: 0
+>>>>>>> Stashed changes
   m_Name: Collider
   m_TagString: Ladder
   m_Icon: {fileID: 0}
@@ -7487,7 +7492,7 @@ GameObject:
   - component: {fileID: 1858316118}
   - component: {fileID: 1858316120}
   - component: {fileID: 1858316119}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ladder
   m_TagString: Ladder
   m_Icon: {fileID: 0}
