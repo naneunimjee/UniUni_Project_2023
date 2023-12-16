@@ -117,6 +117,6 @@ public class PlayerTeleport : MonoBehaviour
                     new Vector2(TeleportPos[0].transform.position.x + 3, TeleportPos[0].transform.position.y);
                 break;
         }
-        player1.maxPosition = player2.maxPosition = 0;
+        player1.maxPosition = player2.maxPosition = -500;
     }
 }
