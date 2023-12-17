@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharlieManager : MonoBehaviour
+public class BabaraManager : MonoBehaviour
 {
     public AudioManager audioManager;
     public int jumpPower;
@@ -19,16 +19,14 @@ public class CharlieManager : MonoBehaviour
 
     public void OnClickButton()
     {
-        CharlieClick();
+        BabaraClick();
     }
 
-    public void CharlieClick()
+    public void BabaraClick()
     {   
         audioManager.PlaySound("Jump");
         rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        animator.SetBool("P1_isJumping", true);
-
+        animator.SetBool("P2_isJumping", true);
     }
-    
 
 }
