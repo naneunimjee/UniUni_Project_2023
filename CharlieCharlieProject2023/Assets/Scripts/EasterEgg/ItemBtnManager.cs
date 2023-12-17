@@ -32,4 +32,9 @@ public class ItemBtnManager : MonoBehaviour
         }
     }
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
 }
