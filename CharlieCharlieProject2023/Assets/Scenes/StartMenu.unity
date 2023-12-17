@@ -241,39 +241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 1627468534}
   jumpPower: 1000
---- !u!1 &101050657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 101050658}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &101050658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101050657}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 507.78302, y: 296.7736, z: -1.4406798}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 278547974}
-  - {fileID: 1627468535}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105938121
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,11 +860,11 @@ Transform:
   m_GameObject: {fileID: 278547972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.787567, y: 2.3986511, z: 1.2230704}
+  m_LocalPosition: {x: 500.99545, y: 299.17224, z: -0.2176094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 101050658}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288552401
 GameObject:
@@ -5074,11 +5041,11 @@ Transform:
   m_GameObject: {fileID: 1627468533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.787567, y: 2.3986511, z: 1.2230704}
+  m_LocalPosition: {x: 500.99545, y: 299.17224, z: -0.2176094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 101050658}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1627468536
 AudioSource:
@@ -7657,5 +7624,6 @@ SceneRoots:
   - {fileID: 814304787}
   - {fileID: 608752530}
   - {fileID: 1163531292}
-  - {fileID: 101050658}
+  - {fileID: 278547974}
+  - {fileID: 1627468535}
   - {fileID: 1396962672}
