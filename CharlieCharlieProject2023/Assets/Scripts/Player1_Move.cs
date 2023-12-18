@@ -19,6 +19,7 @@ public class Player1_Move : MonoBehaviour
     public bool isclear; //클리어 지점 도착 여부 확인용 
     public bool isLadder;
     private float ver; //사다리를 오를 때, w = 1, s = -1를 저장해두기 위한 변수
+    public bool isTouchingPlatform;  // 내리막 내려갈 때
 
     void Awake()
     {
@@ -95,6 +96,11 @@ public class Player1_Move : MonoBehaviour
             isfall = true;
         }
 
+        // 내리막 내려갈 때
+        if (isTouchingPlatform && rigid.velocity.y < 0)
+        {
+            animator.SetBool("P1_isJumping", false);
+        }
     }
 
     void FixedUpdate()
@@ -137,7 +143,7 @@ public class Player1_Move : MonoBehaviour
             rigid.gravityScale = 4;
         }
 
-            //점프 착지 확인용 레이캐스트 구현
+        //점프 착지 확인용 레이캐스트 구현
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
@@ -161,7 +167,7 @@ public class Player1_Move : MonoBehaviour
     }
 
 
-void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.tag == "Enemy")
@@ -184,6 +190,19 @@ void OnCollisionEnter2D(Collision2D collision)
         {
             //장애물, P1_장애물과 태그됐을 때 데미지 받음
             OnDamaged(collision.transform.position);
+        }
+
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isTouchingPlatform = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isTouchingPlatform = false;
         }
     }
 
