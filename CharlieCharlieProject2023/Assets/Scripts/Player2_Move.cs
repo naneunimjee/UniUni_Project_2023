@@ -44,7 +44,7 @@ public class Player2_Move : MonoBehaviour
         }
 
         //높은 곳에서 떨어질때 모션 구현
-        if (rigid.velocity.y < 0)
+        if (rigid.velocity.y < -2)
         {
             animator.SetBool("P2_isJumping", true);
         }
@@ -55,7 +55,6 @@ public class Player2_Move : MonoBehaviour
             rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.7f, rigid.velocity.y);
         }
 
-        //방향 전환//이거 Horizontal로 바꿀지 생각해봐야함
         if (Input.GetKey(KeyCode.LeftArrow)) 
         {
             spriteRenderer.flipX = true;
@@ -174,6 +173,7 @@ public class Player2_Move : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isTouchingPlatform = true;
+            animator.SetBool("P2_isJumping", false);
         }
     }
 
