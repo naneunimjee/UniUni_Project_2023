@@ -24,6 +24,10 @@ public class AudioManager : MonoBehaviour
      
     public void PlaySound(string action)
     {
+        GameObject go = new GameObject("AD"+action);
+        audioSource = go.AddComponent<AudioSource>();
+        DontDestroyOnLoad(go);
+
         switch (action)
         {
             case "Item":
@@ -48,5 +52,6 @@ public class AudioManager : MonoBehaviour
                 audioSource.clip = ADPushBtn; break;
         }
         audioSource.Play();
+        Destroy(go, audioSource.clip.length);
     }
 }
