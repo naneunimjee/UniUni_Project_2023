@@ -19,7 +19,7 @@ public class Player2_Move : MonoBehaviour
     public bool isclear; //스테이지 이동 여부 확인
     public bool isLadder;
     private float ver; //사다리를 오를 때, w = 1, s = -1를 저장해두기 위한 변수
-
+    public bool isTouchingPlatform;
     void Awake()
     {
         isclear = false;
@@ -94,6 +94,12 @@ public class Player2_Move : MonoBehaviour
         {
             isfall = true;
         }
+
+        // 내리막 내려갈 때
+        if (isTouchingPlatform && rigid.velocity.y < 0)
+        {
+            animator.SetBool("P2_isJumping", false);
+        }
     }
 
     void FixedUpdate() 
@@ -165,16 +171,18 @@ public class Player2_Move : MonoBehaviour
             OnDamaged(collision.transform.position);
         }
 
-        /*
-        // 플랫폼에 서 있을 때는 사다리 off
-        string platformLayerName = "Platform";
-        int collidedLayer = collision.gameObject.layer;
-
-        if (LayerMask.LayerToName(collidedLayer) == platformLayerName)
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            animator.SetBool("P2_onLadder", false);
-            animator.SetBool("P2_LadderStop", false);
-        }*/
+            isTouchingPlatform = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isTouchingPlatform = false;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
