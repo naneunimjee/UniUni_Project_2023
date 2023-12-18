@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        audioManager.PlaySound("UIBtnClk");
         Time.timeScale = 1;
         stageIndex = 0;
         SceneManager.LoadScene(stageIndex);

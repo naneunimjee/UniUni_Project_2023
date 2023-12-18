@@ -15,10 +15,10 @@ public class ChangeScene : MonoBehaviour
                 SceneManager.LoadScene(2);
                 break;
             case "InfoBtn": //InfoScene number is 1
-                SceneManager.LoadScene("InfoScene");
+                SceneManager.LoadScene(1);
                 break;
             case "BackBtn": //StartMenu number is 0
-                SceneManager.LoadScene("StartMenu");
+                SceneManager.LoadScene(0);
                 break;
         }
     }
