@@ -1,6 +1,7 @@
 // EnemyMove.cs
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
@@ -43,9 +44,19 @@ public class EnemyMove : MonoBehaviour
         Debug.DrawRay(forward, Vector2.right * nextMove, Color.red); // 빨간색으로 표시
         RaycastHit2D hit = Physics2D.Raycast(forward, Vector2.right * nextMove, 0.2f, LayerMask.GetMask("Platform"));   
 
-        if ((hit.collider != null))
+        if (hit.collider != null)
         {
             Turn();
+        }
+
+        // 낭떠러지에서 떨어짐 방지
+        Vector2 fall = new Vector2(rigid.position.x + nextMove * 0.3f, rigid.position.y - 0.5f);
+        Debug.DrawRay(fall, Vector3.down, Color.yellow);
+        RaycastHit2D fallHit = Physics2D.Raycast(fall, Vector3.down, 0.2f, LayerMask.GetMask("Platform"));
+
+        if (fallHit.collider == null)
+        {
+            rigid.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
