@@ -47,7 +47,7 @@ public class Player1_Move : MonoBehaviour
         }
         
         //높은 곳에서 떨어질때 모션 구현
-        if (rigid.velocity.y<0)
+        if (rigid.velocity.y<-2)
         {
             animator.SetBool("P1_isJumping", true);
         }
@@ -194,6 +194,7 @@ public class Player1_Move : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isTouchingPlatform = true;
+            animator.SetBool("P1_isJumping", false);
         }
     }
 
