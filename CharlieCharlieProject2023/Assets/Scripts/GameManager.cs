@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
-using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +23,8 @@ public class GameManager : MonoBehaviour
     public GameObject UIClearBtn;
     public TextMeshProUGUI ItemMSG;
     public GameObject EndingMent;
+    public GameObject UIClearExitBtn;
+    public GameObject UIExitBtn;
 
     private void Update()
     {
@@ -54,12 +53,14 @@ public class GameManager : MonoBehaviour
             audioManager.PlaySound("Pause");
             Time.timeScale = 0;
             UIRestartBtn.SetActive(true);
+            UIExitBtn.SetActive(true);
             IsPause = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && IsPause == true)
         {
             Time.timeScale = 1;
             UIRestartBtn.SetActive(false);
+            UIExitBtn.SetActive(false);
             IsPause = false;
         }
     }
@@ -108,7 +109,7 @@ public class GameManager : MonoBehaviour
 
             EndingMent.SetActive(true);
             UIClearBtn.SetActive(true);
-
+            UIClearExitBtn.SetActive(true);
         }
     }
 
@@ -159,8 +160,13 @@ public class GameManager : MonoBehaviour
         Player2.OnDie();
         audioManager.PlaySound("GameFail");
         UIRestartBtn.SetActive(true);
+        UIExitBtn.SetActive(true);
     }
 
+    public void GameExit()
+    {
+        Application.Quit();
+    }
     public void UIupdate()
     {
         if (P1_HP < 2)
