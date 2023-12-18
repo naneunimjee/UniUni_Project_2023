@@ -153,7 +153,7 @@ public class Player2_Move : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             //Attack
-            if ((collision.transform.position.y < transform.position.y) && rigid.velocity.y < 0)
+            if ((collision.transform.position.y < transform.position.y) && animator.GetBool("P2_isJumping"))
             {
                 //Enemy Die
                 OnAttack(collision.transform);
