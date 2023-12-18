@@ -5030,9 +5030,11 @@ MonoBehaviour:
   ADGameClear: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   ADJump: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
   ADTeleport: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
-  ADStageClear: {fileID: 0}
+  ADStageClear: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   ADDamaged: {fileID: 8300000, guid: 28d07c306aa084748b597d5e62f95c74, type: 3}
-  ADPushBtn: {fileID: 0}
+  ADPushBtn: {fileID: 8300000, guid: becf2d19fedff7b479581f8ea2716d3c, type: 3}
+  ADItemNotice: {fileID: 8300000, guid: dc6614beca09347ec9b258f12d154bdd, type: 3}
+  ADPause: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
   audioSource: {fileID: 0}
 --- !u!4 &1627468535
 Transform:

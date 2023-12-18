@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip ADStageClear;
     public AudioClip ADDamaged;
     public AudioClip ADPushBtn;
+    public AudioClip ADItemNotice;
+    public AudioClip ADPause;
 
     public AudioSource audioSource;
 
@@ -50,6 +52,10 @@ public class AudioManager : MonoBehaviour
                 audioSource.clip = ADDamaged; break;
             case "PushBtn":
                 audioSource.clip = ADPushBtn; break;
+            case "ItemNotice":
+                audioSource.clip = ADItemNotice; break;
+            case "Pause":
+                audioSource.clip = ADPause; break;
         }
         audioSource.Play();
         Destroy(go, audioSource.clip.length);

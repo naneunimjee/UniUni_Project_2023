@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             if (GetItem != 3) //아이템을 다 안 먹었을 시 안내 팝업창, 다 먹었으면 다음 스테이지
             {
-                ItemMSG.text="You must get all item";
+                ItemMSG.text = "You must get all item";
             }
             else
             {
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && IsPause == false)
         {
+            audioManager.PlaySound("Pause");
             Time.timeScale = 0;
             UIRestartBtn.SetActive(true);
             IsPause = true;
