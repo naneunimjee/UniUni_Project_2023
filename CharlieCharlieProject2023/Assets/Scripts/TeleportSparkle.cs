@@ -19,10 +19,7 @@ public class TeleportSparkle : MonoBehaviour
             animator.SetTrigger("teleport_sparkle");
         }
 
-        else if (collision.gameObject.tag == "Player1")
+        else if ( (collision.gameObject.tag == "Player1") || collision.gameObject.tag == "Player2")
             animator.SetTrigger("teleport_sparkle");
-
-        else if (collision.gameObject.tag == "Player2")
-            animator.SetTrigger("teleprot_sparkle");
     }
 }

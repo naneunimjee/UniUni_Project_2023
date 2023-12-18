@@ -5124,7 +5124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1091449327
 Transform:
   m_ObjectHideFlags: 0
@@ -6585,6 +6585,7 @@ MonoBehaviour:
   isfall: 0
   isclear: 0
   isLadder: 0
+  isTouchingPlatform: 0
 --- !u!70 &1395781732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12178,6 +12179,7 @@ MonoBehaviour:
   isfall: 0
   isclear: 0
   isLadder: 0
+  isTouchingPlatform: 0
 --- !u!70 &2045642853
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
