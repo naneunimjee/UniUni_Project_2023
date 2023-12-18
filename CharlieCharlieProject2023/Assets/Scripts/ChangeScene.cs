@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    public AudioManager AudioManager;
     public void ChangeScenefunc()
     {
+        AudioManager.PlaySound("UIBtnClk");
         switch (this.gameObject.name)
         {
             case "StartBtn":

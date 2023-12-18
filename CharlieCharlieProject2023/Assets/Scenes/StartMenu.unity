@@ -3812,6 +3812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44600ca71f17214e8797a8c3c142de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioManager: {fileID: 1627468534}
 --- !u!1 &1309513116
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44600ca71f17214e8797a8c3c142de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioManager: {fileID: 1627468534}
 --- !u!1 &1425500632
 GameObject:
   m_ObjectHideFlags: 0
