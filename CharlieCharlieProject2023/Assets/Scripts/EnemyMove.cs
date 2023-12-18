@@ -47,6 +47,16 @@ public class EnemyMove : MonoBehaviour
         {
             Turn();
         }
+
+        // 낭떠러지에서 떨어짐 방지
+        Vector2 fall = new Vector2(rigid.position.x + nextMove * 0.3f, rigid.position.y - 0.5f);
+        Debug.DrawRay(fall, Vector3.down, Color.yellow);
+        RaycastHit2D fallHit = Physics2D.Raycast(fall, Vector3.down, 0.2f, LayerMask.GetMask("Platform"));
+
+        if (fallHit.collider == null)
+        {
+            rigid.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
