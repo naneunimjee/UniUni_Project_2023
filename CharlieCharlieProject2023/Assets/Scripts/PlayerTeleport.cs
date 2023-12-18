@@ -93,7 +93,7 @@ public class PlayerTeleport : MonoBehaviour
                 gameObject.transform.position = SecondBox;
                 break;
         }
-        player1.maxPosition = player2.maxPosition = 0;
+        player1.maxPosition = player2.maxPosition = -500;
     }
 
     void MoveToInSCKMap(Transform Pos, int i)
