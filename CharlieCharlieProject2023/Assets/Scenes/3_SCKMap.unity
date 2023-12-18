@@ -944,6 +944,7 @@ MonoBehaviour:
   isfall: 0
   isclear: 0
   isLadder: 0
+  isTouchingPlatform: 0
 --- !u!95 &116381174
 Animator:
   serializedVersion: 5
@@ -4221,6 +4222,7 @@ MonoBehaviour:
   isfall: 0
   isclear: 0
   isLadder: 0
+  isTouchingPlatform: 0
 --- !u!95 &1085579473
 Animator:
   serializedVersion: 5
@@ -11944,7 +11946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1789097076
 Transform:
   m_ObjectHideFlags: 0
